@@ -4,6 +4,10 @@ import { Menu, X, Phone } from "lucide-react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  function handleNavClick(){
+    setIsMenuOpen(false);
+  }
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,28 +71,32 @@ export default function Header() {
               <a
                 href="#features"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={handleNavClick}
               >
                 Features
               </a>
               <a
                 href="#pricing"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={handleNavClick}
               >
                 Pricing
               </a>
               <a
                 href="#testimonials"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={handleNavClick}
               >
                 Reviews
               </a>
               <a
                 href="#faq"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={handleNavClick}
               >
                 FAQ
               </a>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg w-full hover:bg-blue-700 transition-colors">
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg w-full hover:bg-blue-700 transition-colors" onClick={handleNavClick}>
                 Free Demo
               </button>
             </nav>
