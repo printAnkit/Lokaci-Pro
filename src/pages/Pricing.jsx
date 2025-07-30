@@ -103,7 +103,7 @@ export default function Pricing() {
   return (
     <>
     <section className="bg-gradient-to-br from-green-900 via-gray-900 to-gray-950">
-    <section className="relative py-20 overflow-hidden ">
+    <section className="relative py-15 overflow-hidden ">
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back to Home Link */}
@@ -148,7 +148,7 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-    <section id="pricing" className="py-20 ">
+    <section id="pricing" className="py-10 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" grid md:grid-cols-3 gap-8 mb-8">
           {plans.map((plan, index) => (
@@ -186,7 +186,7 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-sm text-red-600 font-medium mb-1 italic mt-2">
+                <p className="text-sm text-red-500 font-medium mb-1 italic mt-2">
                   {plan.note}
                 </p>
               </div>
