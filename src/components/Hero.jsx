@@ -54,7 +54,7 @@ export default function Hero() {
             )}
           </div>
 
-          <div className="bg-white rounded-lg p-6 max-w-2xl mx-auto shadow-black shadow-md ">
+          <div className="bg-white rounded-lg p-6 max-w-2xl mx-auto shadow-black shadow-xs">
             <div className="flex items-center justify-center mb-2">
               {[...Array(5)].map((_, i) => (
                 <Star

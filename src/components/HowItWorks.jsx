@@ -41,7 +41,7 @@ export default function HowItWorks() {
     <section className="py-10 bg-gradient-to-bl from-blue-950 to-blue-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             From Chaos to Cash Flow in{" "}
             <span className="text-white">3 Simple Steps</span>
           </h2>
@@ -71,7 +71,7 @@ export default function HowItWorks() {
               <ul className="space-y-1 text-sm">
                 {step.points.map((point, pointIndex) => (
                   <li key={pointIndex} className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
+                    <span className="text-blue-600 mr-2 font-extrabold">•</span>
                     <span className="text-gray-700">{point}</span>
                   </li>
                 ))}

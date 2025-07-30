@@ -40,7 +40,7 @@ export default function ProblemPromise() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Every Day You Don't Have Lokaci Pro,{" "}
-            <span className="text-red-600 text-shadow-red-500 text-shadow-glow text-shadow-sm">You're Bleeding Money</span>
+            <span className="text-red-600 text-shadow-red-500 text-shadow-xs ">You're Bleeding Money</span>
           </h2>
           <p className="text-xl text-gray-700 mb-8">
             Your salon could be making 40% more revenue. Here's what's secretly
