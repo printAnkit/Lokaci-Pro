@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import Pricing from "./pages/Pricing";
+import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.jsx";
+import Home from "./pages/Home.jsx";
+import Pricing from "./pages/Pricing.jsx";
 
 export default function App() {
 
