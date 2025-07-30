@@ -8,14 +8,12 @@ export default function App() {
 
   return (
     <Router>
-    <div>
       <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pricing" element={<Pricing />} />
         </Routes>
       <Footer/>
-    </div>
     </Router>
   )
 }
