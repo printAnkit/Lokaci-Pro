@@ -121,7 +121,6 @@ export default function Pricing() {
       <section className="bg-white min-h-screen">
         <section className="relative py-15 overflow-hidden ">
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div className="text-center fade-in-up">
               <div className="inline-flex items-center bg-black backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-full mb-8">
                 <Calculator className="h-5 w-5 mr-2 text-blue-600" />

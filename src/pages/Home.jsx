@@ -1,6 +1,5 @@
 import Hero from "../components/Hero.jsx";
 import ProblemPromise from "../components/ProblemPromise.jsx";
-import CoreBenefits from "../components/CoreBenefits.jsx";
 import HowItWorks from "../components/HowItWorks.jsx";
 import Testimonials from "../components/Testimonials.jsx";
 import CallToAction from "../components/CallToAction.jsx";
@@ -11,7 +10,6 @@ export default function Home() {
     <div>
       <Hero />
       <ProblemPromise />
-      <CoreBenefits />
       <HowItWorks />
       <Testimonials />
       <CallToAction />

@@ -46,7 +46,7 @@ export default function ProblemPromise() {
     initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-    className="py-20 bg-blue-100">
+    className="py-20 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -71,14 +71,14 @@ export default function ProblemPromise() {
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="flex flex-wrap justify-center items-center gap-8 mb-16">
           {problems.map((problem, index) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               key={index}
-              className="bg-white p-4 rounded-lg shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-2xl "
+              className=" p-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-2xl border-black border-t-1 border-l-1 w-90 "
             >
               <div className="flex items-center mb-2">
                 <problem.icon className="h-5 w-5 text-red-500 mr-3" />
@@ -95,7 +95,7 @@ export default function ProblemPromise() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-gradient-to-r from-blue-900 to-blue-700 rounded-2xl p-6 text-center text-white"
+          className="bg-blue-950 rounded-2xl p-6 text-center text-white"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-2">The Promise</h3>
           <p className="text-lg mb-2">
