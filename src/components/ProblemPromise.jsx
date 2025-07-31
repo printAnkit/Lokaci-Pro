@@ -42,7 +42,11 @@ export default function ProblemPromise() {
   ];
 
   return (
-    <section className="py-20 bg-blue-100">
+    <motion.section
+    initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    className="py-20 bg-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -90,7 +94,7 @@ export default function ProblemPromise() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="bg-gradient-to-r from-blue-900 to-blue-700 rounded-2xl p-6 text-center text-white"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-2">The Promise</h3>
@@ -104,6 +108,6 @@ export default function ProblemPromise() {
           </p>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
