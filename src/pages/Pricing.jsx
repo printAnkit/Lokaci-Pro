@@ -113,100 +113,100 @@ export default function Pricing() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-green-900 via-gray-900 to-gray-950">
+      <section className="bg-gray-100 min-h-screen">
         <section className="relative py-15 overflow-hidden ">
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Back to Home Link */}
             <Link
               to="/"
-              className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors group bg-green-800 p-2 rounded-3xl "
+              className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors group bg-gray-900 p-2 rounded-3xl shadow-lg "
             >
               <ArrowLeft className="h-5 w-5 mr-2 group-hover:-translate-x-1 transition-transform" />
               Back to Home
             </Link>
 
             <div className="text-center fade-in-up">
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-full mb-8">
-                <Calculator className="h-5 w-5 mr-2 text-yellow-300" />
+              <div className="inline-flex items-center bg-black backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-full mb-8">
+                <Calculator className="h-5 w-5 mr-2 text-blue-600" />
                 <span className="font-semibold">Choose Your Perfect Plan</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 text-shadow">
+              <h1 className="text-4xl md:text-6xl font-bold text-black mb-8 text-shadow">
                 Simple Pricing That <br />
-                <span className="text-yellow-300 relative">
+                <span className="text-blue-600 relative">
                   Grows With You
-                  <div className="absolute -inset-1 bg-yellow-300/20 blur-lg rounded-lg"></div>
                 </span>
               </h1>
 
-              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-black max-w-3xl mx-auto mb-8">
                 No contracts. No hidden fees. Cancel anytime. Start with a 7-day
                 free trial and see the difference.
               </p>
 
               {/* Stats */}
               <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="glass-effect p-6 rounded-2xl border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-300 mb-2">
+                <div className="glass-effect p-6 rounded-2xl border border-black">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
                     3,000+
                   </div>
-                  <div className="text-white/80">Happy Salons</div>
+                  <div className="text-black">Happy Salons</div>
                 </div>
-                <div className="glass-effect p-6 rounded-2xl border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-300 mb-2">
+                <div className="glass-effect p-6 rounded-2xl border border-black">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
                     45%
                   </div>
-                  <div className="text-white/80">Average Revenue Increase</div>
+                  <div className="text-black">Average Revenue Increase</div>
                 </div>
-                <div className="glass-effect p-6 rounded-2xl border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-300 mb-2">
+                <div className="glass-effect p-6 rounded-2xl border border-black">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
                     24hrs
                   </div>
-                  <div className="text-white/80">Setup Time</div>
+                  <div className="text-black">Setup Time</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section id="pricing" className="py-10 ">
+
+        <section id="pricing" className="py-10  ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className=" grid md:grid-cols-3 gap-8 mb-8">
+            <div className=" grid md:grid-cols-3 gap-8 mb-8 ">
               {plans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`rounded-2xl shadow-xl p-6 relative flex flex-col justify-between transition-all duration-300 border-3 border-gray-500  ${
+                  className={`rounded-2xl shadow-xl p-6 relative flex flex-col justify-between transition-all duration-300 border-3 border-black bg-white  ${
                     selectedPlan === index
-                      ? "ring-4 ring-blue-600 scale-102"
+                      ? "ring-4 ring-blue-950 scale-102"
                       : ""
                   }`}
                 >
                   <div>
                     {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-5 py-1 rounded-full text-sm font-semibold">
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-950 text-white px-5 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
                     )}
                     <div className="text-center mb-2 ">
-                      <div className="bg-purple-100 p-1 rounded-lg w-fit mx-auto mb-1">
+                      <div className="bg-gray-300 p-1 rounded-lg w-fit mx-auto mb-1">
                         <plan.icon className="h-8 w-8 text-black" />
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-1">
+                      <h3 className="text-xl font-bold text-black mb-1">
                         {plan.name}
                       </h3>
-                      <div className="text-2xl font-bold text-gray-100 mb-1">
+                      <div className="text-2xl font-bold text-black mb-1">
                         {plan.price}
-                        <span className="text-lg text-gray-300">
+                        <span className="text-lg text-black">
                           {plan.period}
                         </span>
                       </div>
-                      <p className="text-gray-300 mb-1">{plan.monthly}</p>
-                      <p className="text-white">{plan.description}</p>
+                      <p className="text-black mb-1">{plan.monthly}</p>
+                      <p className="text-black">{plan.description}</p>
                     </div>
                     <ul className="space-y-1 mb-1">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
                           <Check className="h-5 w-5 text-green-500 mr-2 mt-0 flex-shrink-0" />
-                          <span className="text-white text-sm">{feature}</span>
+                          <span className="text-black text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -219,7 +219,7 @@ export default function Pricing() {
                       onClick={() => handlePlanSelect(index)}
                       className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 cursor-pointer ${
                         selectedPlan === index
-                          ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg"
+                          ? "bg-blue-950 text-white hover:bg-blue-950 shadow-lg"
                           : "bg-gray-100 text-gray-900 hover:bg-gray-300"
                       }`}
                     >
@@ -233,20 +233,20 @@ export default function Pricing() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
               <div className="text-center fade-in-up">
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
                   Enhance Your Experience
                 </h2>
-                <p className="text-xl text-yellow-300 max-w-3xl mx-auto">
+                <p className="text-xl text-black max-w-3xl mx-auto">
                   Optional add-ons to customize your salon management experience
                 </p>
               </div>
 
               <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-center ">
                   {addOns.map((addon, index) => (
                     <div
                       key={index}
-                      className="bg-gradient-to-tr from-gray-400 to-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-100 fade-in-up h-full"
+                      className="bg-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-500 fade-in-up h-full transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-100 hover:shadow-2xl"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <div className="text-4xl mb-2">{addon.icon}</div>
