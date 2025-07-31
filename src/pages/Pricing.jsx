@@ -10,9 +10,10 @@ import {
   MessageCircleMore,
   Smartphone,
   Building,
-  Blocks
+  Blocks,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 
 export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(1);
@@ -135,38 +136,62 @@ export default function Pricing() {
                 <span className="font-semibold">Choose Your Perfect Plan</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-black mb-8 text-shadow">
-                <p className="md:mb-[-50px] mb-[-20px]">Simple Pricing That</p> <br />
-                <span className="text-blue-600 relative">
-                  Grows With You
-                </span>
-              </h1>
+              <motion.h1
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+                className="text-4xl md:text-6xl font-bold text-black mb-8 text-shadow"
+              >
+                <p className="md:mb-[-50px] mb-[-20px]">Simple Pricing That</p>{" "}
+                <br />
+                <span className="text-blue-600 relative">Grows With You</span>
+              </motion.h1>
 
-              <p className="text-xl text-black max-w-3xl mx-auto mb-8">
+              <motion.p
+                initial={{ y: -20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-xl text-black max-w-3xl mx-auto mb-8"
+              >
                 No contracts. No hidden fees. Cancel anytime. Start with a 7-day
                 free trial and see the difference.
-              </p>
+              </motion.p>
 
               {/* Stats */}
               <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="glass-effect p-6 rounded-2xl border border-black shadow-xl">
+                <motion.div
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 1 }}
+                  className="glass-effect p-6 rounded-2xl border border-black shadow-xl"
+                >
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     3,000+
                   </div>
                   <div className="text-black">Happy Salons</div>
-                </div>
-                <div className="glass-effect p-6 rounded-2xl border border-black shadow-xl">
+                </motion.div>
+                <motion.div
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 1.2 }}
+                  className="glass-effect p-6 rounded-2xl border border-black shadow-xl"
+                >
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     45%
                   </div>
                   <div className="text-black">Average Revenue Increase</div>
-                </div>
-                <div className="glass-effect p-6 rounded-2xl border border-black shadow-xl">
+                </motion.div>
+                <motion.div
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 1.4 }}
+                  className="glass-effect p-6 rounded-2xl border border-black shadow-xl"
+                >
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     24hrs
                   </div>
                   <div className="text-black">Setup Time</div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -176,7 +201,10 @@ export default function Pricing() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className=" grid md:grid-cols-3 gap-8 mb-8 ">
               {plans.map((plan, index) => (
-                <div
+                <motion.div
+                  initial={{ scale: 0.8 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.2, type: "spring", stiffness: 100 }}
                   key={index}
                   className={`rounded-2xl shadow-xl p-6 relative flex flex-col justify-between transition-all duration-300 border-2 border-black bg-white  ${
                     selectedPlan === index
@@ -231,29 +259,42 @@ export default function Pricing() {
                       {/* {selectedPlan === index ? "Selected" : `Choose ${plan.name.split(" ")[0]}`} */}
                     </button>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
               <div className="text-center fade-in-up">
-                <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
+                <motion.h2
+                  initial={{ y: -20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="text-3xl md:text-5xl font-bold text-black mb-4"
+                >
                   Enhance Your Experience
-                </h2>
-                <p className="text-xl text-black max-w-3xl mx-auto">
+                </motion.h2>
+                <motion.p
+                  initial={{ y: -20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                  className="text-xl text-black max-w-3xl mx-auto"
+                >
                   Optional add-ons to customize your salon management experience
-                </p>
+                </motion.p>
               </div>
 
               <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-center ">
                   {addOns.map((addon, index) => (
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 1, duration: 0.8 }}
                       key={index}
                       className="bg-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-500 fade-in-up h-full transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-100 hover:shadow-2xl"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <addon.icon className="h-8 w-8 mb-2"/>
+                      <addon.icon className="h-8 w-8 mb-2" />
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {addon.name}
                       </h3>
@@ -266,13 +307,18 @@ export default function Pricing() {
                       <p className="text-gray-800 text-sm leading-relaxed">
                         {addon.description}
                       </p>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </section>
             </div>
 
-            <div className="bg-gradient-to-r from-green-800 to-green-900 rounded-xl p-8 text-center flex flex-col items-center text-white">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
+              className="bg-gradient-to-r from-green-800 to-green-900 rounded-xl p-8 text-center flex flex-col items-center text-white"
+            >
               <h3 className="text-2xl font-bold mb-2 flex items-center">
                 <Gift className=" w-6 h-6 text-red-600 fill-yellow-400" />{" "}
                 Launch Offer
@@ -284,7 +330,7 @@ export default function Pricing() {
               <p className="text-sm">
                 Limited time offer for the first 100 signups
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
       </section>

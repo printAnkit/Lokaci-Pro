@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -52,7 +53,13 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="faq"
+      className="py-20 bg-white"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -88,6 +95,6 @@ export default function FAQ() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

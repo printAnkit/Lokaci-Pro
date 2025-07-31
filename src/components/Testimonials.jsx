@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react"
+import { Star, Quote } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Testimonials() {
   const testimonials = [
@@ -31,17 +32,27 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-20 bg-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-black
-           mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mb-16"
+        >
+          <h2
+            className="text-3xl md:text-5xl font-bold text-black
+           mb-4"
+          >
             Real Salon Owners,{" "}
             <span className="text-blue-600">Real Results</span>
           </h2>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-4 gap-4">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
               key={index}
               className="bg-white p-4 rounded-xl shadow-2xl relative"
             >
@@ -66,7 +77,7 @@ export default function Testimonials() {
                 </p>
                 <p className="text-blue-900">{testimonial.business}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

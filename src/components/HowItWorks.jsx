@@ -1,4 +1,5 @@
 import { Settings, Smartphone, TrendingUp } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function HowItWorks() {
   const steps = [
@@ -38,18 +39,31 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-10 bg-gradient-to-bl from-blue-950 to-blue-500">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="py-10 bg-gradient-to-bl from-blue-950 to-blue-500"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-3xl md:text-4xl font-bold text-white mb-6"
+          >
             From Chaos to Cash Flow in{" "}
             <span className="text-white">3 Simple Steps</span>
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
               key={index}
               className="bg-white p-8 rounded-xl shadow-lg relative transition duration-300 ease-in-out hover:-translate-y-3 hover:scale-100 hover:shadow-2xl"
             >
@@ -61,9 +75,7 @@ export default function HowItWorks() {
                 <step.icon className="h-5 w-5 text-blue-600" />
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900">
-                {step.title}
-              </h3>
+              <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
               <h4 className="text-lg font-semibold text-blue-600 mb-2">
                 {step.subtitle}
               </h4>
@@ -76,10 +88,10 @@ export default function HowItWorks() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
