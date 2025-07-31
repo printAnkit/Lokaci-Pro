@@ -7,6 +7,10 @@ import {
   Gift,
   ArrowLeft,
   Calculator,
+  MessageCircleMore,
+  Smartphone,
+  Building,
+  Blocks
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -79,7 +83,7 @@ export default function Pricing() {
       unit: "per 1000 messages",
       description:
         "Additional automated WhatsApp messages beyond your plan limit",
-      icon: "💬",
+      icon: MessageCircleMore,
     },
     {
       name: "White-labeled Customer App",
@@ -87,7 +91,7 @@ export default function Pricing() {
       unit: "per year",
       description:
         "Custom branded mobile app for your customers with your salon's branding",
-      icon: "📱",
+      icon: Smartphone,
     },
     {
       name: "Advanced Franchise Dashboard",
@@ -95,7 +99,7 @@ export default function Pricing() {
       unit: "per year",
       description:
         "Enhanced multi-location management with advanced analytics and controls",
-      icon: "🏢",
+      icon: Building,
     },
     {
       name: "Custom Integrations",
@@ -103,7 +107,7 @@ export default function Pricing() {
       unit: "one-time setup",
       description:
         "Connect with your existing POS, accounting, or other business software",
-      icon: "🔗",
+      icon: Blocks,
     },
   ];
 
@@ -113,7 +117,7 @@ export default function Pricing() {
 
   return (
     <>
-      <section className="bg-gray-100 min-h-screen">
+      <section className="bg-white min-h-screen">
         <section className="relative py-15 overflow-hidden ">
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Back to Home Link */}
@@ -132,7 +136,7 @@ export default function Pricing() {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-black mb-8 text-shadow">
-                Simple Pricing That <br />
+                <p className="md:mb-[-50px] mb-[-20px]">Simple Pricing That</p> <br />
                 <span className="text-blue-600 relative">
                   Grows With You
                 </span>
@@ -145,19 +149,19 @@ export default function Pricing() {
 
               {/* Stats */}
               <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="glass-effect p-6 rounded-2xl border border-black">
+                <div className="glass-effect p-6 rounded-2xl border border-black shadow-xl">
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     3,000+
                   </div>
                   <div className="text-black">Happy Salons</div>
                 </div>
-                <div className="glass-effect p-6 rounded-2xl border border-black">
+                <div className="glass-effect p-6 rounded-2xl border border-black shadow-xl">
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     45%
                   </div>
                   <div className="text-black">Average Revenue Increase</div>
                 </div>
-                <div className="glass-effect p-6 rounded-2xl border border-black">
+                <div className="glass-effect p-6 rounded-2xl border border-black shadow-xl">
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     24hrs
                   </div>
@@ -174,9 +178,9 @@ export default function Pricing() {
               {plans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`rounded-2xl shadow-xl p-6 relative flex flex-col justify-between transition-all duration-300 border-3 border-black bg-white  ${
+                  className={`rounded-2xl shadow-xl p-6 relative flex flex-col justify-between transition-all duration-300 border-2 border-black bg-white  ${
                     selectedPlan === index
-                      ? "ring-4 ring-blue-950 scale-102"
+                      ? "ring-1 ring-blue-950 scale-102"
                       : ""
                   }`}
                 >
@@ -210,7 +214,7 @@ export default function Pricing() {
                         </li>
                       ))}
                     </ul>
-                    <p className="text-sm text-red-500 font-medium mb-1 italic mt-2">
+                    <p className="text-md text-red-500 font-medium mb-1 italic mt-2">
                       {plan.note}
                     </p>
                   </div>
@@ -249,7 +253,7 @@ export default function Pricing() {
                       className="bg-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-500 fade-in-up h-full transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-100 hover:shadow-2xl"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <div className="text-4xl mb-2">{addon.icon}</div>
+                      <addon.icon className="h-8 w-8 mb-2"/>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {addon.name}
                       </h3>
