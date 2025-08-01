@@ -94,7 +94,7 @@ export default function Header() {
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               <Link
-                to="/#features"
+                to="/features"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
                 onClick={handleNavClick}
               >
