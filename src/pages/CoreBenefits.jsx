@@ -11,7 +11,15 @@ import {
   Shield,
   Zap,
   Smartphone,
+  MessageCircleMore,
+  CreditCard,
+  ReceiptIndianRupee,
+  Mail,
+  FolderCode,
+  Calendar1,
 } from "lucide-react";
+import businessGrowthLogo from '../assets/BusinessGrowth.jpg'
+
 export default function CoreBenefits() {
   const mainFeatures = [
     {
@@ -165,19 +173,20 @@ export default function CoreBenefits() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className=" py-20">
+      <section className="py-20 flex flex-wrap lg:flex-nowrap justify-center ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black">
             Features That
-            <span className="block md:text-7xl text-blue-600 my-5">
+            <span className="block md:text-6xl text-blue-600 my-5">
               Actually Make You Money
             </span>
           </h1>
-          <p className="text-xl text-gray-700 md:mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-800 md:mb-8 max-w-4xl mx-auto">
             Every feature in Lokaci Pro is designed with one goal: increase your
             revenue while reducing your workload. Here's how we make it happen.
           </p>
         </div>
+        <img src={businessGrowthLogo} alt="" className="w-150 mr-5"/>
       </section>
 
       {/* Main Features */}
@@ -298,44 +307,44 @@ export default function CoreBenefits() {
                 title: "WhatsApp Business API",
                 description:
                   "Send automated messages, confirmations, and campaigns directly through WhatsApp",
-                icon: "💬",
+                icon: MessageCircleMore,
               },
               {
                 title: "Payment Gateways",
                 description:
                   "Accept payments through Razorpay, PayU, and other popular payment processors",
-                icon: "💳",
+                icon: CreditCard,
               },
               {
                 title: "GST Compliance",
                 description:
                   "Automatic GST calculations and compliant invoice generation",
-                icon: "📊",
+                icon: ReceiptIndianRupee,
               },
               {
                 title: "Email Marketing",
                 description:
                   "Integrated email campaigns for customer retention and promotions",
-                icon: "📧",
+                icon: Mail,
               },
               {
                 title: "Accounting Software",
                 description:
                   "Export data to popular accounting software like Tally and QuickBooks",
-                icon: "📈",
+                icon: FolderCode,
               },
               {
                 title: "Google Calendar",
                 description:
                   "Sync appointments with Google Calendar for better organization",
-                icon: "📅",
+                icon: Calendar1,
               },
             ].map((integration, index) => (
               <div
                 key={index}
-                className="bg-gray-100 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 shadow-black shadow-sm "
+                className="  p-8 rounded-xl border-1 border-gray-700 hover:border-blue-500 shadow-black shadow-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 "
               >
-                <div className="text-4xl mb-4">{integration.icon}</div>
+                <integration.icon className="text-4xl mb-4" />
                 <h3 className="text-xl font-semibold text-black mb-3">
                   {integration.title}
                 </h3>
