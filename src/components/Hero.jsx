@@ -11,7 +11,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 pt-0 ">
+    <div className="flex flex-col items-center justify-center px-4 mt-18 md:mt-30 ">
       <div className="text-center">
         <motion.h1
           initial={{ scale: 0 }}

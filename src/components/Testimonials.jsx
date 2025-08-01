@@ -1,84 +1,170 @@
-import { Star, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
+
+const testimonials = [
+  {
+    id:1,
+    name: "Priya Sharma",
+    business: "Glamour Studio, Mumbai",
+    rating: 5,
+    text: "My revenue increased by 45% in just 3 months. The loyalty system brings customers back automatically, and I finally know which services are actually profitable.",
+  },
+  {
+    id:2,
+    name: "Rajesh Kumar",
+    business: "Hair & Care Franchise (12 locations), Delhi",
+    rating: 5,
+    text: "Managing 12 salons was a nightmare. Now I can see everything from one dashboard. My managers love it, and I'm saving 20+ hours every week.",
+  },
+  {
+    id:3,
+    name: "Meera Patel",
+    business: "Scissors & Style, Ahmedabad",
+    rating: 5,
+    text: "The WhatsApp automation alone saves me 2 hours daily. Customers love getting automatic reminders, and my no-show rate dropped by 60%.",
+  },
+  {
+    id:4,
+    name: "Vikram Singh",
+    business: "The Salon Hub, Bangalore",
+    rating: 5,
+    text: "I was skeptical about salon software, but Lokaci Pro actually increased my profits from day one. The GST billing saves me thousands in accountant fees.",
+  },
+];
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Priya Sharma",
-      business: "Glamour Studio, Mumbai",
-      rating: 5,
-      text: "My revenue increased by 45% in just 3 months. The loyalty system brings customers back automatically, and I finally know which services are actually profitable.",
-    },
-    {
-      name: "Rajesh Kumar",
-      business: "Hair & Care Franchise (12 locations), Delhi",
-      rating: 5,
-      text: "Managing 12 salons was a nightmare. Now I can see everything from one dashboard. My managers love it, and I'm saving 20+ hours every week.",
-    },
-    {
-      name: "Meera Patel",
-      business: "Scissors & Style, Ahmedabad",
-      rating: 5,
-      text: "The WhatsApp automation alone saves me 2 hours daily. Customers love getting automatic reminders, and my no-show rate dropped by 60%.",
-    },
-    {
-      name: "Vikram Singh",
-      business: "The Salon Hub, Bangalore",
-      rating: 5,
-      text: "I was skeptical about salon software, but Lokaci Pro actually increased my profits from day one. The GST billing saves me thousands in accountant fees.",
-    },
-  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+    setIsAutoPlaying(false);
+    // Resume auto-play after 10 seconds
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
+  const goToPrevious = () => {
+    const newIndex =
+      currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
+    goToSlide(newIndex);
+  };
+
+  const goToNext = () => {
+    const newIndex =
+      currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
+    goToSlide(newIndex);
+  };
 
   return (
-    <section id="testimonials" className="py-20 bg-blue-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mb-16"
-        >
-          <h2
-            className="text-3xl md:text-5xl font-bold text-black
-           mb-4"
-          >
-            Real Salon Owners,{" "}
-            <span className="text-blue-600">Real Results</span>
-          </h2>
-        </motion.div>
+    <section className="w-full py-20 bg-muted/50">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Real Salon Owners, <span className="text-blue-600" >Real Results</span>
+            </h2>
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Join thousands of satisfied customers who have transformed their
+              workflow with our platform.
+            </p>
+          </div>
+        </div>
 
-        <div className="grid md:grid-cols-4 gap-4">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              key={index}
-              className="bg-white p-4 rounded-xl shadow-2xl relative"
-            >
-              <Quote className="h-5 w-5 text-blue-600 mb-4" />
+        <div className="mx-auto max-w-4xl mt-12">
+          <div className="relative">
+            {/* Main testimonial display */}
+            <div className="overflow-hidden rounded-lg">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {testimonials.map((testimonial) => (
+                  <div key={testimonial.id} className="w-full flex-shrink-0">
+                    <div className="bg-background rounded-lg p-4 md:p-4 md:px-8 shadow-lg border">
+                      <div className="flex flex-col items-center text-center space-y-4">
+                        {/* Stars */}
+                        <div className="flex space-x-1">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                            />
+                          ))}
+                        </div>
 
-              <div className="flex items-center mb-2">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-5 w-5 text-yellow-400 fill-current"
-                  />
+                        {/* Testimonial content */}
+                        <blockquote className="text-md font-medium ">
+                          "{testimonial.text}"
+                        </blockquote>
+
+                        {/* Customer info */}
+                        <div className="flex flex-col items-center">
+                          <div>
+                            <div className="font-semibold text-lg">
+                              {testimonial.name}
+                            </div>
+                            <div className="text-muted-foreground">
+                              {testimonial.business}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
+            </div>
 
-              <p className="text-gray-700 mb-1 text-sm leading-relaxed">
-                "{testimonial.text}"
-              </p>
+            {/* Navigation arrows */}
+            <button
+              variant="outline"
+              size="icon"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm"
+              onClick={goToPrevious}
+            >
+              <ChevronLeft className="h-4 w-4" />
+              <span className="sr-only">Previous testimonial</span>
+            </button>
+            <button
+              variant="outline"
+              size="icon"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm"
+              onClick={goToNext}
+            >
+              <ChevronRight className="h-4 w-4" />
+              <span className="sr-only">Next testimonial</span>
+            </button>
+          </div>
 
-              <div className="border-t pt-1">
-                <p className="font-semibold text-gray-900">
-                  {testimonial.name}
-                </p>
-                <p className="text-blue-900">{testimonial.business}</p>
-              </div>
-            </motion.div>
-          ))}
+          {/* Dots indicator */}
+          <div className="flex justify-center space-x-2 mt-8">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                  index === currentIndex
+                    ? "bg-black"
+                    : "bg-gray-300 "
+                }`}
+                onClick={() => goToSlide(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
