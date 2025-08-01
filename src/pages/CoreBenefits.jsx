@@ -222,15 +222,15 @@ export default function CoreBenefits() {
               return (
                 <div
                   key={index}
-                  className={`flex flex-col ${
-                    isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                  className={`flex flex-col justify-evenly ${
+                    isEven ? "lg:flex-row " : "lg:flex-row-reverse "
                   } items-center gap-12`}
                 >
                   <div>
                     <img src={feature.logo} className="w-100" alt="" />
                   </div>
 
-                  <div className="flex-1">
+                  <div>
                     <div>
                       <div>
                         <div
