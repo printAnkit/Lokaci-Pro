@@ -17,8 +17,22 @@ import {
   Mail,
   FolderCode,
   Calendar1,
+  CircleSmall,
+  Dot,
+  DotIcon,
+  DotSquare,
+  Circle,
 } from "lucide-react";
-import businessGrowthLogo from '../assets/BusinessGrowth.jpg'
+import businessGrowthLogo from "../assets/BusinessGrowth.jpg";
+import appointment from "../assets/appointment.jpg";
+import performance from '../assets/performance.jpg';
+import revenue from '../assets/revenue.png';
+import inventory from '../assets/inventory.jpg';
+import customer from '../assets/customer.png';
+import membership from '../assets/membership.png';
+import location from '../assets/location.png';
+import analytic from '../assets/analytic.png';
+
 
 export default function CoreBenefits() {
   const mainFeatures = [
@@ -37,6 +51,7 @@ export default function CoreBenefits() {
       ],
       benefit: "35% fewer no-shows",
       color: "white",
+      logo: appointment,
     },
     {
       icon: Users,
@@ -53,6 +68,7 @@ export default function CoreBenefits() {
       ],
       benefit: "20% increase in staff productivity",
       color: "white",
+      logo: performance,
     },
     {
       icon: TrendingUp,
@@ -69,6 +85,7 @@ export default function CoreBenefits() {
       ],
       benefit: "25% higher average ticket size",
       color: "white",
+      logo: revenue,
     },
     {
       icon: Package,
@@ -84,6 +101,7 @@ export default function CoreBenefits() {
       ],
       benefit: "30% reduction in inventory costs",
       color: "white",
+      logo: inventory,
     },
     {
       icon: MessageCircle,
@@ -99,6 +117,7 @@ export default function CoreBenefits() {
       ],
       benefit: "40% increase in repeat customers",
       color: "white",
+      logo: customer,
     },
     {
       icon: Gift,
@@ -114,6 +133,7 @@ export default function CoreBenefits() {
       ],
       benefit: "50% increase in customer lifetime value",
       color: "white",
+      logo: membership,
     },
     {
       icon: Building2,
@@ -129,6 +149,7 @@ export default function CoreBenefits() {
       ],
       benefit: "15+ hours saved weekly for franchise owners",
       color: "white",
+      logo: location,
     },
     {
       icon: BarChart3,
@@ -144,6 +165,7 @@ export default function CoreBenefits() {
       ],
       benefit: "Make decisions based on data, not guesswork",
       color: "white",
+      logo: analytic,
     },
   ];
 
@@ -171,7 +193,7 @@ export default function CoreBenefits() {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen md:pt-20">
       {/* Hero Section */}
       <section className="py-20 flex flex-wrap lg:flex-nowrap justify-center ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -186,7 +208,7 @@ export default function CoreBenefits() {
             revenue while reducing your workload. Here's how we make it happen.
           </p>
         </div>
-        <img src={businessGrowthLogo} alt="" className="w-150 mr-5"/>
+        <img src={businessGrowthLogo} alt="" className="w-140 mr-5" />
       </section>
 
       {/* Main Features */}
@@ -204,47 +226,51 @@ export default function CoreBenefits() {
                     isEven ? "lg:flex-row" : "lg:flex-row-reverse"
                   } items-center gap-12`}
                 >
-                  <div className="flex-1">
-                    <div
-                      className={`inline-flex p-4 rounded-2xl text-${feature.color}-400 mb-6`}
-                    >
-                      <Icon className="h-12 w-12" />
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-                      {feature.title}
-                    </h2>
-                    <p className="text-xl text-gray-800 mb-6">
-                      {feature.description}
-                    </p>
-                    <div
-                      className={`inline-block bg-black border border-${feature.color}-500/30 px-6 py-3 rounded-full mb-8`}
-                    >
-                      <span
-                        className={`text-${feature.color} font-semibold`}
-                      >
-                        ✨ {feature.benefit}
-                      </span>
-                    </div>
-                    <hr></hr>
+                  <div>
+                    <img src={feature.logo} className="w-100" alt="" />
                   </div>
 
                   <div className="flex-1">
-                    <div className="bg-gray-900 backdrop-blur-sm p-8 rounded-2xl border border-gray-700">
-                      <h3 className="text-xl font-semibold text-white mb-6">
-                        Key Features:
-                      </h3>
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        {feature.features.map((item, itemIndex) => (
-                          <div
-                            key={itemIndex}
-                            className="flex items-start space-x-3"
+                    <div>
+                      <div>
+                        <div
+                          className={`inline-flex p-4 rounded-2xl text-${feature.color}-400 mb-6`}
+                        >
+                          <Icon className="h-10 w-10" />
+                        </div>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                          {feature.title}
+                        </h2>
+                        <p className="text-lg text-gray-800 mb-6">
+                          {feature.description}
+                        </p>
+                        <div
+                          className={`inline-block bg-blue-700 border border-${feature.color}-500/30 px-6 py-2 rounded-full mb-8`}
+                        >
+                          <span
+                            className={`text-${feature.color} font-semibold`}
                           >
+                            ✨ {feature.benefit}
+                          </span>
+                        </div>
+                        
+                      </div>
+                      <hr/>
+                      <div className=" backdrop-blur-sm p-6 rounded-2xl">
+                        <h3 className="text-xl font-semibold text-black mb-6">
+                          Key Features:
+                        </h3>
+                        <div className="flex flex-col gap-1">
+                          {feature.features.map((item, itemIndex) => (
                             <div
-                              className={`w-2 h-2 rounded-full bg-${feature.color}-400 mt-2 flex-shrink-0`}
-                            ></div>
-                            <span className="text-white">{item}</span>
-                          </div>
-                        ))}
+                              key={itemIndex}
+                              className="flex items-start space-x-3"
+                            >
+                              <CircleSmall className="text-black fill-black w-4 "/>
+                              <span className="text-black font-semibold">{item}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -342,13 +368,13 @@ export default function CoreBenefits() {
             ].map((integration, index) => (
               <div
                 key={index}
-                className="  p-8 rounded-xl border-1 border-gray-700 hover:border-blue-500 shadow-black shadow-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 "
+                className="  p-8 rounded-xl border-gray-700 hover:border-blue-500 shadow-black shadow-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 "
               >
                 <integration.icon className="text-4xl mb-4" />
                 <h3 className="text-xl font-semibold text-black mb-3">
                   {integration.title}
                 </h3>
-                <p className="text-gray-900">{integration.description}</p>
+                <p className="text-gray-950">{integration.description}</p>
               </div>
             ))}
           </div>

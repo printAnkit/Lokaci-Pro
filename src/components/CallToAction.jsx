@@ -91,8 +91,8 @@ export default function CallToAction() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.6 }}
-          className="bg-red-500 rounded-xl p-6 max-w-2xl mx-auto"
+          transition={{ delay: 1, duration: 0.6 }}
+          className="bg-red-600 rounded-xl p-6 max-w-2xl mx-auto"
         >
           <div className="flex items-center justify-center mb-2">
             <Clock className="h-6 w-6 mr-2" />
