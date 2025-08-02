@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Subtitles } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function FAQ({title, subTitle}) {
@@ -63,7 +63,7 @@ export default function FAQ({title, subTitle}) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {title} <span className="text-blue-800">Know</span>
+            {title} <span className="text-blue-800">{subTitle}</span>
           </h2>
         </div>
 
@@ -71,7 +71,7 @@ export default function FAQ({title, subTitle}) {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-500 hover:text-black rounded-lg"
+              className="border border-gray-500 hover:text-black rounded-lg overflow-hidden"
             >
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-100 transition-colors cursor-pointer"

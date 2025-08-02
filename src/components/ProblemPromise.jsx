@@ -78,7 +78,7 @@ export default function ProblemPromise() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               key={index}
-              className=" p-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-2xl border-black border-t-1 border-l-1 w-90 "
+              className=" p-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-2xl border-black w-90 "
             >
               <div className="flex items-center mb-2">
                 <problem.icon className="h-5 w-5 text-red-500 mr-3" />

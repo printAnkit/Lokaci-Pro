@@ -207,6 +207,88 @@ export default function Pricing() {
           </div>
         </section>
 
+        <section>
+          <div className="min-h-screen bg-gradient-to-br from-gray-900  to-gray-700 flex items-center justify-center p-8">
+            <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-center">
+              {/* Left Side - Pricing Content */}
+              <div className="text-white space-y-8">
+                {/* Header */}
+                <div className="space-y-4">
+                  <h1 className="text-6xl font-bold tracking-tight">Pricing</h1>
+                  <p className="text-xl text-gray-300">
+                    Get your money's worth with Lokaci Pro.
+                  </p>
+                </div>
+
+                {/* Pricing */}
+                <div className="space-y-4 py-8 border-t border-gray-600">
+                  <div className="inline-block bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-sm font-medium border border-orange-400/30">
+                    Limited period offer
+                  </div>
+                  <div className="space-y-2">
+                    <h2 className="text-4xl font-bold">
+                      Get everything for{" "}
+                      <span className="text-orange-400 flex items-center">
+                        <IndianRupee className="w-10 h-10" />
+                        5,000
+                      </span>
+                    </h2>
+                    <p className="text-gray-400">per year + tax</p>
+                  </div>
+
+                  <button className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 mt-6 cursor-pointer ">
+                    Start free now
+                  </button>
+                </div>
+
+                {/* Features */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-gray-600">
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0">
+                      <BadgeCheck className="w-8 h-8 text-teal-400 bg-teal-400/20 rounded-full p-1" />
+                    </div>
+                    <span className="text-lg">All features included</span>
+                  </div>
+
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0">
+                      <BadgeCheck className="w-8 h-8 text-teal-400 bg-teal-400/20 rounded-full p-1" />
+                    </div>
+                    <span className="text-lg">No hidden or extra fees</span>
+                  </div>
+
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0">
+                      <BadgeCheck className="w-8 h-8 text-teal-400 bg-teal-400/20 rounded-full p-1" />
+                    </div>
+                    <span className="text-lg">No commitment</span>
+                  </div>
+
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0">
+                      <BadgeCheck className="w-8 h-8 text-teal-400 bg-teal-400/20 rounded-full p-1" />
+                    </div>
+                    <span className="text-lg">Cancel anytime</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side - Image */}
+              <div className="hidden lg:block">
+                <div className="relative">
+                  <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-400/20 to-orange-400/20 backdrop-blur-sm">
+                    <img
+                      src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop"
+                      alt="Professional portrait"
+                      className="w-full h-full object-cover mix-blend-overlay"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="pricing" className="py-10  ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className=" py-10 md:py-20 flex items-center justify-center ">
@@ -352,7 +434,134 @@ export default function Pricing() {
             </motion.div>
           </div>
         </section>
-        {/* <FAQ title="Lokaci Pricing FAQs" subTitle=""/> */}
+
+        <section className="min-h-screen bg-gradient-to-b from-gray-950 to-gray-900">
+          {/* Hero Section */}
+          <div className="relative">
+            {/* Background image area - using a placeholder gradient */}
+            <div className="h-50 bg-gray-950 relative overflow-hidden">
+              <div className="relative z-10 flex items-center justify-start h-full px-8 md:px-16 lg:px-24">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-2xl">
+                  We don't charge you
+                  <br />
+                  extra for:
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="px-8 md:px-16 lg:px-24 py-16">
+            <div className="space-y-10">
+              {/* Row 1 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+                {features.slice(0, 3).map((feature, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <Scissors className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-white text-lg md:text-xl font-semibold leading-tight">
+                        {feature.title}
+                      </h3>
+                      {feature.subtitle && (
+                        <p className="text-white text-lg md:text-xl font-semibold leading-tight">
+                          {feature.subtitle}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Divider Line */}
+              <div className="border-t border-gray-500 opacity-30"></div>
+
+              {/* Row 2 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+                {features.slice(3, 6).map((feature, index) => (
+                  <div key={index + 3} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <Scissors className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-white text-lg md:text-xl font-semibold leading-tight">
+                        {feature.title}
+                      </h3>
+                      {feature.subtitle && (
+                        <p className="text-white text-lg md:text-xl font-semibold leading-tight">
+                          {feature.subtitle}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Divider Line */}
+              <div className="border-t border-gray-500 opacity-30"></div>
+
+              {/* Row 3 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+                {features.slice(6, 9).map((feature, index) => (
+                  <div key={index + 6} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <Scissors className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-white text-lg md:text-xl font-semibold leading-tight">
+                        {feature.title}
+                      </h3>
+                      {feature.subtitle && (
+                        <p className="text-white text-lg md:text-xl font-semibold leading-tight">
+                          {feature.subtitle}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Divider Line */}
+              <div className="border-t border-gray-500 opacity-30"></div>
+
+              {/* Row 4 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+                {features.slice(9, 12).map((feature, index) => (
+                  <div key={index + 9} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <Scissors className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-white text-lg md:text-xl font-semibold leading-tight">
+                        {feature.title}
+                      </h3>
+                      {feature.subtitle && (
+                        <p className="text-white text-lg md:text-xl font-semibold leading-tight">
+                          {feature.subtitle}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <Link
+                to="/features"
+                className="bg-white text-gray-800 hover:bg-gray-800 hover:text-white  px-8 py-4 rounded-lg font-semibold text-lg shadow-lg cursor-pointer"
+              >
+                See all included features
+              </Link>
+              <p className="text-white text-sm mt-4 opacity-80">
+                (Hint: It's all of them.)
+              </p>
+            </div>
+          </div>
+        </section>
+        <FAQ title="Lokaci Pricing FAQs" subTitle=""/>
       </section>
     </>
   );
