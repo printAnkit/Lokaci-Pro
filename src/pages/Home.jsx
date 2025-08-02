@@ -1,7 +1,7 @@
 import Hero from "../components/Hero.jsx";
 import ProblemPromise from "../components/ProblemPromise.jsx";
 import HowItWorks from "../components/HowItWorks.jsx";
-import Testimonials from "../components/Testimonials.jsx";
+import Testimonials from "../components/Testimonials.jsx"
 import CallToAction from "../components/CallToAction.jsx";
 import FAQ from "../components/FAQ.jsx";
 
@@ -13,7 +13,7 @@ export default function Home() {
       <HowItWorks />
       <Testimonials />
       <CallToAction />
-      <FAQ />
+      <FAQ title="Everything You need to" subTitle="know." />
     </div>
   );
 }

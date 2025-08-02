@@ -41,14 +41,20 @@ export default function Header() {
             <Link
               to="/features"
               className="text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={handleNavClick}
+              onClick={() => {
+                handleNavClick();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             >
               Features
             </Link>
             <Link
               to="/pricing"
               className="text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={handleNavClick}
+              onClick={() => {
+                handleNavClick();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             >
               Pricing
             </Link>
@@ -96,14 +102,20 @@ export default function Header() {
               <Link
                 to="/features"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={handleNavClick}
+                onClick={() => {
+                handleNavClick();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               >
                 Features
               </Link>
               <Link
                 to="/pricing"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={handleNavClick}
+                onClick={() => {
+                handleNavClick();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               >
                 Pricing
               </Link>

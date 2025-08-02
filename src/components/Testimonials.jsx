@@ -1,5 +1,4 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
-import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 const testimonials = [

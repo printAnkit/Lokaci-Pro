@@ -213,7 +213,7 @@ export default function CoreBenefits() {
 
       {/* Main Features */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="space-y-20">
             {mainFeatures.map((feature, index) => {
               const Icon = feature.icon;
@@ -223,18 +223,18 @@ export default function CoreBenefits() {
                 <div
                   key={index}
                   className={`flex flex-col justify-evenly ${
-                    isEven ? "lg:flex-row " : "lg:flex-row-reverse "
+                    isEven ? "lg:flex-row " : "lg:flex-row-reverse"
                   } items-center gap-12`}
                 >
                   <div>
-                    <img src={feature.logo} className="w-100" alt="" />
+                    <img src={feature.logo} className="w-70 md:w-100 mb-0 " alt="" />
                   </div>
 
                   <div>
                     <div>
                       <div>
                         <div
-                          className={`inline-flex p-4 rounded-2xl text-${feature.color}-400 mb-6`}
+                          className={`inline-flex rounded-2xl text-${feature.color}-400 mb-6`}
                         >
                           <Icon className="h-10 w-10" />
                         </div>
@@ -390,7 +390,7 @@ export default function CoreBenefits() {
           <p className="text-xl text-gray-300 mb-8">
             See how Lokaci Pro can transform your salon in just 24 hours
           </p>
-          <button className="bg-gradient-to-r from-blue-900 to-purple-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-950 hover:to-purple-950 transition-all duration-200 transform hover:scale-105 cursor-pointer">
+          <button className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-all duration-200 transform hover:scale-105 cursor-pointer">
             Start Your Free Demo
           </button>
         </div>

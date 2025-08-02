@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion } from "motion/react";
 
-export default function FAQ() {
+export default function FAQ({title, subTitle}) {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
@@ -63,7 +63,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Everything You Need to <span className="text-blue-800">Know</span>
+            {title} <span className="text-blue-800">Know</span>
           </h2>
         </div>
 
@@ -74,7 +74,7 @@ export default function FAQ() {
               className="border border-gray-500 hover:text-black rounded-lg"
             >
               <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-200 transition-colors"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-100 transition-colors cursor-pointer"
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="font-semibold text-gray-900 pr-4">

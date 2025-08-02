@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 bg-gradient-to-r from-red-600 to-red-800 rounded-xl p-4 text-center">
+        <div className="mt-8 bg-gradient-to-r from-red-700 to-red-800 rounded-xl p-4 text-center">
           <p className="text-lg font-semibold mb-1">⚡ Limited Time: Save ₹2,000 on your first year</p>
           <p className="mb-2">Only 47 spots remaining at launch pricing</p>
           <button className="bg-white text-red-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors cursor-pointer">

@@ -38,7 +38,7 @@ export default function HowItWorks() {
 
   return (
     <div className="min-h-screen  py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Headline */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -56,7 +56,7 @@ export default function HowItWorks() {
 
           {/* Step 1 */}
           <div className="relative mb-12 md:mb-20">
-            <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex flex-col md:flex-row items-center gap-18">
               <div className="md:w-1/2 md:pr-8">
                 <Card className="shadow-lg border-0 bg-gray-100 backdrop-blur-sm">
                   <CardHeader className="pb-4">
