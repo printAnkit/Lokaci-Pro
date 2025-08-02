@@ -29,7 +29,7 @@ export default function CallToAction() {
     <section className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-2">
-          Join 3,000+ Salon Owners Who Chose{" "}
+          Join 3,000+ Salon Owners Who Choose{" "}
           <span className="text-yellow-300">Growth Over Chaos</span>
         </h2>
 
