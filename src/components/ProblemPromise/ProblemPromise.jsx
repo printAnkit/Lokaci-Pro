@@ -35,12 +35,13 @@ export default function ProblemPromise() {
 
         <div className="flex flex-wrap justify-center items-center gap-8 mb-16">
           {problems.map((problem, index) => (
-            <motion.div
+            <motion.a
+              href={problem.link}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               key={index}
-              className=" p-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-2xl border-black w-90 "
+              className=" p-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-2xl border-black w-90 cursor-pointer "
             >
               <div className="flex items-center mb-2">
                 <problem.icon className="h-5 w-5 text-red-500 mr-3" />
@@ -49,7 +50,7 @@ export default function ProblemPromise() {
                 </h3>
               </div>
               <p className="text-gray-700 text-sm">{problem.description}</p>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 

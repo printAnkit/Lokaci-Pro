@@ -42,7 +42,7 @@ export default function Header() {
 
           <nav className="hidden md:flex space-x-8 font-semibold">
             <Link
-              to="/#features"
+              to="/features"
               className="text-gray-700 hover:text-blue-600 transition-colors"
               onClick={handleNavClick}
             >

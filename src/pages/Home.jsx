@@ -11,7 +11,6 @@ export default function Home() {
     <div>
       <Hero />
       <ProblemPromise />
-      <CoreBenefits/>
       <HowItWorks />
       <Reviews/>
       <CallToAction />
