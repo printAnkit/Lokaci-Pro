@@ -1,16 +1,4 @@
 import {
-  Calendar,
-  Users,
-  TrendingUp,
-  Package,
-  MessageCircle,
-  Gift,
-  Building2,
-  BarChart3,
-  Clock,
-  Shield,
-  Zap,
-  Smartphone,
   MessageCircleMore,
   CreditCard,
   ReceiptIndianRupee,
@@ -18,179 +6,12 @@ import {
   FolderCode,
   Calendar1,
   CircleSmall,
-  Dot,
-  DotIcon,
-  DotSquare,
-  Circle,
 } from "lucide-react";
-import businessGrowthLogo from "../assets/BusinessGrowth.jpg";
-import appointment from "../assets/appointment.jpg";
-import performance from '../assets/performance.jpg';
-import revenue from '../assets/revenue.png';
-import inventory from '../assets/inventory.jpg';
-import customer from '../assets/customer.png';
-import membership from '../assets/membership.png';
-import location from '../assets/location.png';
-import analytic from '../assets/analytic.png';
+import { assets } from "../../assets/assets";
+import { mainFeatures, additionalFeatures } from "./CoreBenefit";
 
 
 export default function CoreBenefits() {
-  const mainFeatures = [
-    {
-      icon: Calendar,
-      title: "Smart Appointment System",
-      description:
-        "Never lose another booking with our intelligent scheduling system",
-      features: [
-        "Real-time calendar with conflict detection",
-        "Walk-in management with queue system",
-        "Automatic SMS and WhatsApp reminders",
-        "Online booking widget for your website",
-        "Staff availability management",
-        "Recurring appointment setup",
-      ],
-      benefit: "35% fewer no-shows",
-      color: "white",
-      logo: appointment,
-    },
-    {
-      icon: Users,
-      title: "Staff Performance Tracking",
-      description:
-        "Know exactly who's making you money with detailed analytics",
-      features: [
-        "Individual staff performance metrics",
-        "Automatic commission calculations",
-        "Working hours and leave management",
-        "Service-wise revenue tracking",
-        "Customer feedback per staff member",
-        "Incentive and bonus management",
-      ],
-      benefit: "20% increase in staff productivity",
-      color: "white",
-      logo: performance,
-    },
-    {
-      icon: TrendingUp,
-      title: "Revenue-Boosting Billing",
-      description:
-        "Professional invoicing that increases your average ticket size",
-      features: [
-        "GST-compliant invoice generation",
-        "Multiple payment methods support",
-        "Package deals and combo offers",
-        "Upselling recommendations",
-        "Split payment options",
-        "Automatic tax calculations",
-      ],
-      benefit: "25% higher average ticket size",
-      color: "white",
-      logo: revenue,
-    },
-    {
-      icon: Package,
-      title: "Smart Inventory Management",
-      description: "Never run out of products or overspend on inventory",
-      features: [
-        "Real-time stock level monitoring",
-        "Automatic reorder alerts",
-        "Product usage tracking per service",
-        "Supplier management system",
-        "Cost analysis and profit margins",
-        "Barcode scanning support",
-      ],
-      benefit: "30% reduction in inventory costs",
-      color: "white",
-      logo: inventory,
-    },
-    {
-      icon: MessageCircle,
-      title: "Customer Retention Automation",
-      description: "Bring customers back automatically with smart campaigns",
-      features: [
-        "Automated WhatsApp follow-ups",
-        "Birthday and anniversary campaigns",
-        "Service reminder notifications",
-        "Feedback collection system",
-        "Win-back campaigns for lost customers",
-        "Personalized offers based on history",
-      ],
-      benefit: "40% increase in repeat customers",
-      color: "white",
-      logo: customer,
-    },
-    {
-      icon: Gift,
-      title: "Loyalty & Membership System",
-      description: "Turn one-time visitors into lifetime customers",
-      features: [
-        "Points-based loyalty program",
-        "Prepaid package management",
-        "Referral reward system",
-        "VIP customer tiers",
-        "Cashback and discount campaigns",
-        "Membership card generation",
-      ],
-      benefit: "50% increase in customer lifetime value",
-      color: "white",
-      logo: membership,
-    },
-    {
-      icon: Building2,
-      title: "Multi-Location Management",
-      description: "Manage unlimited salons from one powerful dashboard",
-      features: [
-        "Centralized dashboard for all locations",
-        "Location-specific reports and analytics",
-        "Staff transfer between branches",
-        "Inventory sharing across locations",
-        "Franchise performance comparison",
-        "Role-based access control",
-      ],
-      benefit: "15+ hours saved weekly for franchise owners",
-      color: "white",
-      logo: location,
-    },
-    {
-      icon: BarChart3,
-      title: "Advanced Analytics & Reports",
-      description: "Make data-driven decisions with comprehensive insights",
-      features: [
-        "Revenue and profit analysis",
-        "Customer behavior insights",
-        "Staff performance comparison",
-        "Service popularity tracking",
-        "Peak hours and seasonal trends",
-        "Custom report generation",
-      ],
-      benefit: "Make decisions based on data, not guesswork",
-      color: "white",
-      logo: analytic,
-    },
-  ];
-
-  const additionalFeatures = [
-    {
-      icon: Clock,
-      title: "Time Management",
-      description: "Optimize your salon's time usage for maximum efficiency",
-    },
-    {
-      icon: Shield,
-      title: "Data Security",
-      description: "Bank-level security to protect your customer data",
-    },
-    {
-      icon: Zap,
-      title: "Fast Performance",
-      description: "Lightning-fast system that works even during peak hours",
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile App",
-      description: "Manage your salon on-the-go with our mobile application",
-    },
-  ];
 
   return (
     <div className="min-h-screen md:pt-20">
@@ -208,7 +29,7 @@ export default function CoreBenefits() {
             revenue while reducing your workload. Here's how we make it happen.
           </p>
         </div>
-        <img src={businessGrowthLogo} alt="" className="w-140 mr-5" />
+        <img src={assets.businessGrowth} alt="" className="w-140 mr-5" />
       </section>
 
       {/* Main Features */}

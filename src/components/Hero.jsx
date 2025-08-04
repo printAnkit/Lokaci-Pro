@@ -1,6 +1,6 @@
 import { Play, Star } from "lucide-react";
 import { useState } from "react";
-import video from "../assets/video.mp4";
+import { assets } from "../assets/assets";
 import { motion } from "motion/react";
 
 export default function Hero() {
@@ -68,7 +68,7 @@ export default function Hero() {
           </div>
           {playDemoSelect && (
             <video width="320" height="240" controls>
-              <source src={video} type="video/mp4" />
+              <source src={assets.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           )}

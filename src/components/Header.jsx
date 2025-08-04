@@ -12,7 +12,7 @@ export default function Header() {
       if (location.hash) {
         const element = document.getElementById(location.hash.replace("#", ""));
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element.scrollIntoView({ behavior: "smooth"});
         }
       }
     };
@@ -49,7 +49,7 @@ export default function Header() {
               Features
             </Link>
 
-            <Link className="relative inline-block text-left">
+            <div className="relative inline-block text-left">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="inline-flex justify-center items-center cursor-pointer text-gray-700 hover:text-blue-600"
@@ -85,10 +85,20 @@ export default function Header() {
                     >
                       Sample Feature2
                     </Link>
+                    <Link
+                      to="/pricing1"
+                      className="m-2"
+                      onClick={() => {
+                        setIsOpen(!isOpen);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Sample Feature3
+                    </Link>
                   </div>
                 </div>
               )}
-            </Link>
+            </div>
 
             <Link
               to="/pricing"

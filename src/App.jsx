@@ -2,11 +2,11 @@ import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import Home from "./pages/Home.jsx";
-import Pricing from "./pages/Pricing.jsx";
-import CoreBenefits from "./pages/CoreBenefits.jsx";
+import Pricing from "./pages/Pricing/Pricing.jsx";
 import Login from "./pages/Login.jsx";
 import HowItWorks from './temp/HowItWorks.jsx'
-import CoreBenefit from "./temp/CoreBenefit.jsx"
+import CoreBenefit from "./temp/CoreBenefits/CoreBenefit.jsx"
+import Pricings from "./temp/Pricings/Pricings.jsx";
 
 export default function App() {
 
@@ -20,6 +20,7 @@ export default function App() {
           <Route path="/auth" element={<Login />} />
           <Route path="/Sample1" element={<HowItWorks />} />
           <Route path="/sample2" element={<CoreBenefit/>} />
+          <Route path="/pricing1" element={<Pricings />}/>
         </Routes>
       <Footer/>
     </Router>

@@ -1,10 +1,10 @@
 import Hero from "../components/Hero.jsx";
-import ProblemPromise from "../components/ProblemPromise.jsx";
-import HowItWorks from "../components/HowItWorks.jsx";
-import Reviews from "../components/Reviews.jsx"
-import CallToAction from "../components/CallToAction.jsx";
-import FAQ from "../components/FAQ.jsx";
-import CoreBenefits from './CoreBenefits.jsx';
+import ProblemPromise from "../components/ProblemPromise/ProblemPromise.jsx";
+import HowItWorks from "../components/HowItWorks/HowItWorks.jsx";
+import Reviews from "../components/Reviews/Reviews.jsx"
+import CallToAction from "../components/CallToAction/CallToAction.jsx";
+import FAQ from "../components/FAQ/FAQ.jsx";
+import CoreBenefits from './CoreBenefits/CoreBenefits.jsx';
 
 export default function Home() {
   return (

@@ -1,7 +1,5 @@
 import { Settings, Smartphone, TrendingUp,Calendar, DollarSign, Zap } from "lucide-react";
-import setupLogo from '../assets/setup.png'
-import bookingsLogo from '../assets/bookings.png'
-import revenueGrowthLogo from '../assets/revenueGrowth.png'
+import { assets } from "../assets/assets";
 import { motion } from "motion/react";
 
 const Card = ({ className = "", children, ...props }) => (
@@ -97,7 +95,7 @@ export default function HowItWorks() {
               </div>
               <div className="md:w-1/2 md:pl-8">
                 <div className="flex items-center justify-center mx-auto">
-                  <img src={setupLogo} className="w-75 h-52" alt=""/>
+                  <img src={assets.setup} className="w-75 h-52" alt=""/>
                 </div>
               </div>
             </div>
@@ -145,7 +143,7 @@ export default function HowItWorks() {
               </div>
               <div className="md:w-1/2 md:pr-8">
                 <div className="flex items-center justify-center mx-auto">
-                  <img src={bookingsLogo} className="w-75 h-52" alt=""/>
+                  <img src={assets.bookings} className="w-75 h-52" alt=""/>
                 </div>
               </div>
             </div>
@@ -193,7 +191,7 @@ export default function HowItWorks() {
               </div>
               <div className="md:w-1/2 md:pl-8">
                 <div className="flex items-center justify-center mx-auto">
-                  <img src={revenueGrowthLogo} className="w-75 h-52" alt=""/>
+                  <img src={assets.revenueGrowth} className="w-75 h-52" alt=""/>
                 </div>
               </div>
             </div>
