@@ -19,7 +19,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import FAQ from "../components/FAQ";
 
-export default function Pricing() {
+export default function pricing() {
   const [selectedPlan, setSelectedPlan] = useState(1);
 
   const plans = [

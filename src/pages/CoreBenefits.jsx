@@ -76,21 +76,21 @@ export default function CoreBenefits() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-4 ">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative p-6 rounded-3xl shadow-lg hover-lift border border-white/50 backdrop-blur-sm fade-in-up overflow-hidden bg-blue-100 flex flex-col justify-between "
+              className="group relative p-10 rounded-3xl shadow-lg hover-lift border-1 border-gray-200 backdrop-blur-sm fade-in-up overflow-hidden flex flex-col justify-between "
             >
               <div className="flex items-start mb-2">
                 <div className="bg-blue-600 p-2 rounded-lg mr-3">
                   <benefit.icon className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  <h3 className="text-2xl  font-bold text-gray-900 mb-1">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-800 text-sm">{benefit.description}</p>
+                  <p className="text-gray-800 text-md">{benefit.description}</p>
                 </div>
               </div>
               <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
