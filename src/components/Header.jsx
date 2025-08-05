@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, ChevronDownIcon } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,14 +40,14 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex space-x-8 font-semibold">
-            <Link
+          <div className="hidden md:flex space-x-8 font-semibold">
+            <NavLink
               to="/features"
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className=" text-gray-700 hover:text-blue-600 "
               onClick={handleNavClick}
             >
               Features
-            </Link>
+            </NavLink>
 
             <div className="relative inline-block text-left">
               <button
@@ -124,7 +124,7 @@ export default function Header() {
             >
               FAQ
             </Link>
-          </nav>
+          </div>
 
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center text-sm text-gray-600">

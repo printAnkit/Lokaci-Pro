@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { benefits } from "./CoreBenefits";
+import { ArrowRight } from "lucide-react";
 
 export default function CoreBenefits() {
   return (
@@ -35,6 +37,12 @@ export default function CoreBenefits() {
               </div>
               <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
                 <div className="h-full bg-blue-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-out"></div>
+              </div>
+              <div className="flex justify-end items-center ">
+                <Link to={benefit.navigatePage} className=" flex items-center ">
+                  <button className=" m-2 cursor-pointer">Learn More</button>
+                  <ArrowRight className="hover:translate-x-1 "/>
+                </Link>
               </div>
             </div>
           ))}
