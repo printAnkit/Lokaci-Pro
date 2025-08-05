@@ -39,7 +39,8 @@ export default function CoreBenefits() {
                 <div className="h-full bg-blue-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-out"></div>
               </div>
               <div className="flex justify-end items-center ">
-                <Link to={benefit.navigatePage} className=" flex items-center ">
+                <Link to={benefit.navigatePage} onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" });
+              }} className=" flex items-center ">
                   <button className=" m-2 cursor-pointer">Learn More</button>
                   <ArrowRight className="hover:translate-x-1 "/>
                 </Link>
