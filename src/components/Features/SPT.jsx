@@ -1,4 +1,4 @@
-import { CornerRightDown, Rocket, SquareCheckBig, User } from "lucide-react";
+import { CornerRightDown, Rocket, SquareCheckBig, Users } from "lucide-react";
 import spt from "../../assets/SPT.png"
 
 const features = [
@@ -100,7 +100,7 @@ export default function SPT() {
         <div className="flex flex-col items-center gap-4 mb-10">
           <div>
             <div className="flex flex-col items-center justify-center gap-4 ">
-                <User className="w-10 h-11 text-black"/>
+                <Users className="w-10 h-11 text-black"/>
               <h1 className="text-black text-3xl md:text-5xl font-bold text-center mb-4 md:mb-8">
                 Staff Performance Tracking
               </h1>
@@ -120,13 +120,13 @@ export default function SPT() {
         {/* Features Section */}
         <div className="flex flex-row gap-4 items-center justify-center mt-20 md:mb-10 ">
           <h1 className="text-3xl md:text-5xl font-bold text-black ">Features</h1>
-          <CornerRightDown className=" size-8 mt-6" />
+          <CornerRightDown className=" size-8 mt-6 text-black " />
         </div>
         <div className="flex flex-wrap justify-center gap-10">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-lg shadow-md w-90">
               <div className="flex gap-4 text-blue-600">
-                <SquareCheckBig className="w-5" />
+                <SquareCheckBig className="w-5 " />
                 <h3 className="text-xl font-semibold mb-4 text-black">
                   {feature.title}
                 </h3>

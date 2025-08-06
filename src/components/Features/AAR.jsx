@@ -93,7 +93,7 @@ const reasons = [
   },
 ];
 
-export default function PI() {
+export default function AAR() {
   return (
     <div className=" text-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -102,7 +102,7 @@ export default function PI() {
             <div className="flex flex-col items-center justify-center gap-4 ">
                 <BarChart3 className="w-10 h-11 text-black"/>
               <h1 className="text-black text-3xl md:text-5xl font-bold text-center mb-4 md:mb-8">
-                Profit Intelligence
+                Advanced Analytics & Reports
               </h1>
             </div>
             <p className="text-gray-700 text-lg font-semibold text-center mb-10 max-w-5xl mx-auto">
@@ -119,7 +119,7 @@ export default function PI() {
         {/* Features Section */}
         <div className="flex flex-row gap-4 items-center justify-center mt-20 md:mb-10 ">
           <h1 className="text-3xl md:text-5xl font-bold text-black ">Features</h1>
-          <CornerRightDown className=" size-8 mt-6" />
+          <CornerRightDown className=" size-8 mt-6 text-black " />
         </div>
         <div className="flex flex-wrap justify-center gap-10">
           {features.map((feature, idx) => (

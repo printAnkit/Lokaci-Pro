@@ -12,7 +12,7 @@ export default function Header() {
       if (location.hash) {
         const element = document.getElementById(location.hash.replace("#", ""));
         if (element) {
-          element.scrollIntoView({ behavior: "smooth"});
+          element.scrollIntoView({ behavior: "smooth" });
         }
       }
     };
@@ -41,13 +41,15 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex space-x-8 font-semibold">
-            <NavLink
+            <Link
               to="/features"
               className=" text-gray-700 hover:text-blue-600 "
-              onClick={handleNavClick}
+              onClick={()=>{
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             >
               Features
-            </NavLink>
+            </Link>
 
             <div className="relative inline-block text-left">
               <button
@@ -154,13 +156,17 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
-              <Link
-                to="/#features"
+              <NavLink
+                to="/features"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={handleNavClick}
+                onClick={()=>{
+                  handleNavClick()
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               >
                 Features
-              </Link>
+              </NavLink>
+
               <Link
                 to="/pricing"
                 className="text-gray-700 hover:text-blue-600 transition-colors"
@@ -186,7 +192,7 @@ export default function Header() {
                 FAQ
               </Link>
               <Link
-                to="/auth"
+                to="auth"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg w-full hover:bg-blue-700 transition-colors"
                 onClick={() => {
                   handleNavClick();

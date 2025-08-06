@@ -1,69 +1,163 @@
 import {
-  Calendar,
-  Users,
-  DollarSign,
-  Package,
-  MessageSquare,
-  Gift,
-  Building,
-  BarChart3,
+  Clock,
+  Shield,
+  Zap,
+  Smartphone,
 } from "lucide-react";
+import { assets } from "../../assets/assets";
 
-export const benefits = [
-    {
-      icon: Calendar,
-      title: "Smart Appointment System",
-      description:
-        "Never lose another booking. Real-time calendar + walk-in management + automatic reminders = 35% fewer no-shows",
-      navigatePage: "sas",
-    },
-    {
-      icon: Users,
-      title: "Staff Performance Tracking",
-      description:
-        "Know exactly who's making you money. Automatic commission calculations + performance analytics + leave management",
-      navigatePage: "spt",
-    },
-    {
-      icon: DollarSign,
-      title: "Revenue-Boosting Billing",
-      description:
-        "GST-compliant invoices in seconds. Upsell tracking, package deals, split payments - increase average ticket size by 25%",
-      navigatePage: "rbb",
-    },
-    {
-      icon: Package,
-      title: "Smart Inventory Control",
-      description:
-        "Never run out of products again. Auto-reorder alerts + usage tracking + cost analysis",
-      navigatePage: "sic",
-    },
-    {
-      icon: MessageSquare,
-      title: "Customer Retention Automation",
-      description:
-        "Bring customers back automatically. WhatsApp follow-ups + birthday offers + loyalty points that actually work",
-      navigatePage: "cra",
-    },
-    {
-      icon: Gift,
-      title: "Membership & Loyalty Engine",
-      description:
-        "Turn one-time visitors into lifetime customers. Prepaid packages + cashback + referral rewards",
-      navigatePage: "mle",
-    },
-    {
-      icon: Building,
-      title: "Multi-Location Mastery",
-      description:
-        "Manage 50 salons from one dashboard. Franchise owners save 15+ hours weekly",
-      navigatePage: "mlm",
-    },
-    {
-      icon: BarChart3,
-      title: "Profit Intelligence",
-      description:
-        "Know your numbers instantly. Which services, staff, and times make you the most money",
-      navigatePage: "pi",
-    },
-  ];
+export const mainFeatures = [
+  {
+    icon: assets.appointmentSmall,
+    title: "Smart Appointment System",
+    description:
+      "Never lose another booking with our intelligent scheduling system",
+    features: [
+      "Real-time calendar with conflict detection",
+      "Walk-in management with queue system",
+      "Automatic SMS and WhatsApp reminders",
+      "Online booking widget for your website",
+      "Staff availability management",
+      "Recurring appointment setup",
+    ],
+    benefit: "35% fewer no-shows",
+    color: "white",
+    navigatePage: "sas"
+  },
+  {
+    icon: assets.performanceSmall,
+    title: "Staff Performance Tracking",
+    description: "Know exactly who's making you money with detailed analytics",
+    features: [
+      "Individual staff performance metrics",
+      "Automatic commission calculations",
+      "Working hours and leave management",
+      "Service-wise revenue tracking",
+      "Customer feedback per staff member",
+      "Incentive and bonus management",
+    ],
+    benefit: "20% increase in staff productivity",
+    color: "white",
+    navigatePage: "spt"
+  },
+  {
+    icon: assets.revenueSmall,
+    title: "Revenue-Boosting Billing",
+    description:
+      "Professional invoicing that increases your average ticket size",
+    features: [
+      "GST-compliant invoice generation",
+      "Multiple payment methods support",
+      "Package deals and combo offers",
+      "Upselling recommendations",
+      "Split payment options",
+      "Automatic tax calculations",
+    ],
+    benefit: "25% higher average ticket size",
+    color: "white",
+    navigatePage: "rbb"
+  },
+  {
+    icon: assets.inventorySmall,
+    title: "Smart Inventory Control",
+    description: "Never run out of products or overspend on inventory",
+    features: [
+      "Real-time stock level monitoring",
+      "Automatic reorder alerts",
+      "Product usage tracking per service",
+      "Supplier management system",
+      "Cost analysis and profit margins",
+      "Barcode scanning support",
+    ],
+    benefit: "30% reduction in inventory costs",
+    color: "white",
+    navigatePage: "sic"
+  },
+  {
+    icon: assets.customerSmall,
+    title: "Customer Retention Automation",
+    description: "Bring customers back automatically with smart campaigns",
+    features: [
+      "Automated WhatsApp follow-ups",
+      "Birthday and anniversary campaigns",
+      "Service reminder notifications",
+      "Feedback collection system",
+      "Win-back campaigns for lost customers",
+      "Personalized offers based on history",
+    ],
+    benefit: "40% increase in repeat customers",
+    color: "white",
+    navigatePage: "cra"
+  },
+  {
+    icon: assets.membershipSmall,
+    title: "Membership & Loyalty Engine",
+    description: "Turn one-time visitors into lifetime customers",
+    features: [
+      "Points-based loyalty program",
+      "Prepaid package management",
+      "Referral reward system",
+      "VIP customer tiers",
+      "Cashback and discount campaigns",
+      "Membership card generation",
+    ],
+    benefit: "50% increase in customer lifetime value",
+    color: "white",
+    navigatePage: "mle"
+  },
+  {
+    icon: assets.locationSmall,
+    title: "Multi Location Mastery",
+    description: "Manage unlimited salons from one powerful dashboard",
+    features: [
+      "Centralized dashboard for all locations",
+      "Location-specific reports and analytics",
+      "Staff transfer between branches",
+      "Inventory sharing across locations",
+      "Franchise performance comparison",
+      "Role-based access control",
+    ],
+    benefit: "15+ hours saved weekly for franchise owners",
+    color: "white",
+    navigatePage: "mlm"
+  },
+  {
+    icon: assets.analyticSmall,
+    title: "Advanced Analytics & Reports",
+    description: "Make data-driven decisions with comprehensive insights",
+    features: [
+      "Revenue and profit analysis",
+      "Customer behavior insights",
+      "Staff performance comparison",
+      "Service popularity tracking",
+      "Peak hours and seasonal trends",
+      "Custom report generation",
+    ],
+    benefit: "Make decisions based on data, not guesswork",
+    color: "white",
+    navigatePage: "aar"
+  },
+];
+
+export const additionalFeatures = [
+  {
+    icon: Clock,
+    title: "Time Management",
+    description: "Optimize your salon's time usage for maximum efficiency",
+  },
+  {
+    icon: Shield,
+    title: "Data Security",
+    description: "Bank-level security to protect your customer data",
+  },
+  {
+    icon: Zap,
+    title: "Fast Performance",
+    description: "Lightning-fast system that works even during peak hours",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile App",
+    description: "Manage your salon on-the-go with our mobile application",
+  },
+];

@@ -1,7 +1,9 @@
 import { Clock} from "lucide-react"
 import { trustPoints } from "./CallToAction";
+import { useNavigate } from "react-router-dom";
 
 export default function CallToAction() {
+  const navigate = useNavigate();
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white">
@@ -16,7 +18,12 @@ export default function CallToAction() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg cursor-pointer ">
+          <button
+            onClick={() => {
+                  navigate("/auth");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+            className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg cursor-pointer ">
             Start My Free Demo - See Results in 24 Hours
           </button>
           <button className="border-2 border-white text-white px-6 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors cursor-pointer ">

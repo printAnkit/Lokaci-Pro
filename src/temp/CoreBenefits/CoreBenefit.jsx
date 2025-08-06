@@ -10,9 +10,7 @@ import {
 import { assets } from "../../assets/assets";
 import { mainFeatures, additionalFeatures } from "./CoreBenefit";
 
-
 export default function CoreBenefits() {
-
   return (
     <div className="min-h-screen md:pt-20">
       {/* Hero Section */}
@@ -48,15 +46,17 @@ export default function CoreBenefits() {
                   } items-center gap-12`}
                 >
                   <div>
-                    <img src={feature.logo} className="w-70 md:w-100 mb-0 " alt="" />
+                    <img
+                      src={feature.logo}
+                      className="w-70 md:w-100 mb-0 "
+                      alt=""
+                    />
                   </div>
 
                   <div>
                     <div>
                       <div>
-                        <div
-                          className={`inline-flex rounded-2xl text-${feature.color}-400 mb-6`}
-                        >
+                        <div className={`inline-flex rounded-2xl text-${feature.color}-400 mb-6`}>
                           <Icon className="h-10 w-10" />
                         </div>
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -74,9 +74,8 @@ export default function CoreBenefits() {
                             ✨ {feature.benefit}
                           </span>
                         </div>
-                        
                       </div>
-                      <hr/>
+                      <hr />
                       <div className=" backdrop-blur-sm p-6 rounded-2xl">
                         <h3 className="text-xl font-semibold text-black mb-6">
                           Key Features:
@@ -87,8 +86,10 @@ export default function CoreBenefits() {
                               key={itemIndex}
                               className="flex items-start space-x-3"
                             >
-                              <CircleSmall className="text-black fill-black w-4 "/>
-                              <span className="text-black font-semibold">{item}</span>
+                              <CircleSmall className="text-black fill-black w-4 " />
+                              <span className="text-black font-semibold">
+                                {item}
+                              </span>
                             </div>
                           ))}
                         </div>

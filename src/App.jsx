@@ -21,7 +21,7 @@ import SIC from "./components/Features/SIC.jsx";
 import CRA from "./components/Features/CRA.jsx";
 import MLE from "./components/Features/MLE.jsx";
 import MLM from "./components/Features/MLM.jsx";
-import PI from "./components/Features/PI.jsx";
+import AAR from "./components/Features/AAR.jsx";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -38,7 +38,7 @@ export default function App() {
           <Route path="cra" element={<CRA/>}/>
           <Route path="mle" element={<MLE/>}/>
           <Route path="mlm" element={<MLM/>}/>
-          <Route path="pi" element={<PI/>}/>
+          <Route path="aar" element={<AAR/>}/>
         </Route>
 
         <Route path="pricing" element={<Pricing />}/>

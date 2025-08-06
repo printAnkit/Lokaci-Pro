@@ -128,7 +128,7 @@ export default function SIC() {
         {/* Features Section */}
         <div className="flex flex-row gap-4 items-center justify-center mt-20 md:mb-10 ">
           <h1 className="text-3xl md:text-5xl font-bold text-black ">Features</h1>
-          <CornerRightDown className=" size-8 mt-6" />
+          <CornerRightDown className=" size-8 mt-6 text-black " />
         </div>
         <div className="flex flex-wrap justify-center gap-10">
           {features.map((feature, idx) => (
