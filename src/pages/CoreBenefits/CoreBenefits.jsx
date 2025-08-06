@@ -88,7 +88,7 @@ export default function CoreBenefits() {
                               key={itemIndex}
                               className="flex items-start space-x-3 md:space-y-4"
                             >
-                              <Scissors className="text-black fill-black w-5 mt-1 " />
+                              <Scissors className="text-black w-5 mt-1 " />
                               <span className="text-black text-lg font-semibold">
                                 {item}
                               </span>
