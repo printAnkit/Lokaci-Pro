@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { problems } from "./ProblemPromise";
+import { Link } from "react-router-dom";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 export default function ProblemPromise() {
   return (
@@ -35,8 +37,8 @@ export default function ProblemPromise() {
 
         <div className="flex flex-wrap justify-center items-center gap-8 mb-16">
           {problems.map((problem, index) => (
-            <motion.a
-              href={problem.link}
+            <Link to={problem.link}>
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
@@ -50,7 +52,10 @@ export default function ProblemPromise() {
                 </h3>
               </div>
               <p className="text-gray-700 text-sm">{problem.description}</p>
-            </motion.a>
+              <button className=" text-xs font-semibold flex w-full justify-end cursor-pointer mt-8 hover:translate-x-1 text-red-600 ">Learn more. <SquareArrowOutUpRight className=" h-4"/> </button>
+            </motion.div>
+            </Link>
+            
           ))}
         </div>
 
@@ -58,7 +63,7 @@ export default function ProblemPromise() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-blue-950 rounded-2xl p-6 text-center text-white"
+          className="bg-blue-900 rounded-2xl p-6 text-center text-white"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-2">The Promise</h3>
           <p className="text-lg mb-2">
@@ -66,8 +71,7 @@ export default function ProblemPromise() {
             hours.
           </p>
           <p className="text-xl font-semibold">
-            Transform your salon from chaotic to profitable with India's most
-            powerful salon management platform.
+            Transform your salon from chaotic to profitable with India's most powerful salon management platform.
           </p>
         </motion.div>
       </div>

@@ -19,6 +19,11 @@ import revenue from "./revenue.png";
 import revenueSmall from "./revenueSmall.png"
 import revenueGrowth from "./revenueGrowth.png";
 import setup from "./setup.png";
+import whatsappChaos from "./wbc.jpg";
+import manualEverything from "./ME.png";
+import ghostCustomer from "./GC.png";
+import staffCommission from "./SCC.jpg";
+import flyingBlind from "./FB.jpg";
 import video from "./video.mp4";
 
 export const assets = {
@@ -42,6 +47,11 @@ export const assets = {
     revenue,
     revenueSmall,
     revenueGrowth,
+    whatsappChaos,
+    manualEverything,
+    staffCommission,
+    ghostCustomer,
+    flyingBlind,
     setup,
     video,
 }

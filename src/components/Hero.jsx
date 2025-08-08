@@ -43,7 +43,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto"
         >
-          From missed appointments to manual billing nightmares – we've solved
+          From missed appointments to manual billing nightmares, we've solved
           every problem that's costing you customers and sleep.
         </motion.p>
 
@@ -66,7 +66,7 @@ export default function Hero() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
               onClick={playDemo}
-              className="flex items-center text-blue-600 border-2 border-blue-600 px-6 py-4 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer"
+              className="flex items-center text-blue-600 hover:text-white hover:border-white hover:bg-blue-600 border-2 border-blue-600 px-6 py-4 rounded-lg transition-colors cursor-pointer"
             >
               <Play className="h-5 w-5 mr-2" />
               Watch 2-Min Demo
