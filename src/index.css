@@ -4,6 +4,58 @@ body {
   font-family: "Montserrat", sans-serif;
   
 }
+
 html {
   scroll-padding-top: 100px; /* Match or exceed the header height */
+}
+
+/* Custom animations for logo scrolling */
+@keyframes scroll-large {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-256px * 12)); /* 12 logos * (192px width + 64px gap) */
+  }
+}
+
+@keyframes scroll-small {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-320px * 12)); /* 12 logos * (288px width + 32px gap) */
+  }
+}
+
+.animate-scroll-large {
+  animation: scroll-large 40s linear infinite;
+}
+
+.animate-scroll-small {
+  animation: scroll-small 45s linear infinite;
+}
+
+/* Mask fade effect for smooth edges */
+.mask-fade {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* Pause animation on hover */
+.animate-scroll-large:hover,
+.animate-scroll-small:hover {
+  animation-play-state: paused;
 }

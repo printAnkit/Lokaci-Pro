@@ -15,7 +15,7 @@ export default function WhatsAppBookingChaos() {
         <section className="flex flex-col md:flex-row items-center gap-8">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center gap-2">
-              <MessageCircleWarning className="w-10 h-10 md:w-15 md:h-15 text-black" />
+              <MessageCircleWarning className="w-10 h-10 text-black" />
               WhatsApp Booking Chaos
             </h2>
 

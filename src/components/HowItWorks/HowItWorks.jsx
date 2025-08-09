@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import { steps } from "./HowItWorks";
 
 export default function HowItWorks() {
 
   return (
-    <section className="py-10 bg-gradient-to-bl from-blue-950 to-blue-500">
+    <section className="py-10 bg-blue-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -18,7 +19,7 @@ export default function HowItWorks() {
               key={index}
               className="bg-white p-8 rounded-xl shadow-lg relative transition duration-300 ease-in-out hover:-translate-y-3 hover:scale-100 hover:shadow-2xl"
             >
-              <div className="absolute -top-4 left-8 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+              <div className="absolute -top-4 left-8 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 {index + 1}
               </div>
 
@@ -44,6 +45,16 @@ export default function HowItWorks() {
             </div>
           ))}
         </div>
+        {/* CTA */}
+        <section className="text-center pt-8">
+          <Link
+            to="auth"
+            onClick={() => window.scrollTo({ top:0, behavior: "smooth" })}
+            className="font-semibold inline-block bg-white text-blue-600 px-10 py-4 rounded-full shadow-white hover:translate-y-1 hover:shadow-sm hover:text-blue-700 transition "
+          >
+            Get Started
+          </Link>
+        </section>
       </div>
     </section>
   );

@@ -63,7 +63,7 @@ export default function Reviews() {
               >
                 {testimonials.map((testimonial) => (
                   <div key={testimonial.id} className="w-full flex-shrink-0">
-                    <div className="bg-background rounded-lg p-4 md:p-4 md:px-8 shadow-lg border">
+                    <div className="rounded-lg p-4 md:p-4 md:px-8 border border-gray-400 ">
                       <div className="flex flex-col items-center text-center space-y-4">
                         {/* Stars */}
                         <div className="flex space-x-1">

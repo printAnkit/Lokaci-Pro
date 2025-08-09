@@ -9,7 +9,7 @@ export default function FlyingBlind() {
         <section className="flex flex-col md:flex-row items-center gap-8">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center gap-2">
-              <EyeOff className="w-10 h-10 md:w-15 md:h-15 text-black" />
+              <EyeOff className="w-10 h-10 text-black" />
               Flying Blind
             </h2>
             <p className="text-red-600 font-medium text-lg mb-4">

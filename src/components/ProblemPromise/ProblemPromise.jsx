@@ -37,7 +37,9 @@ export default function ProblemPromise() {
 
         <div className="flex flex-wrap justify-center items-center gap-8 mb-16">
           {problems.map((problem, index) => (
-            <Link to={problem.link}>
+            <Link 
+              onClick={ () => window.scrollTo({top:0, behavior:'smooth'})}
+              to={problem.link}>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -62,8 +64,8 @@ export default function ProblemPromise() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-blue-900 rounded-2xl p-6 text-center text-white"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="bg-blue-700 rounded-2xl p-6 text-center text-white"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-2">The Promise</h3>
           <p className="text-lg mb-2">

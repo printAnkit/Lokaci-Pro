@@ -5,6 +5,7 @@ import Reviews from "../components/Reviews/Reviews.jsx"
 import CallToAction from "../components/CallToAction/CallToAction.jsx";
 import FAQ from "../components/FAQ/FAQ.jsx";
 import CoreBenefits from './CoreBenefits/CoreBenefits.jsx';
+import BrandCarousel from "../components/BrandCarousel.jsx";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Reviews/>
       <CallToAction />
       <FAQ title="Everything You need to" subTitle="know." />
+      <BrandCarousel/>
     </div>
   );
 }

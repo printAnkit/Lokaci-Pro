@@ -25,6 +25,19 @@ import ghostCustomer from "./GC.png";
 import staffCommission from "./SCC.jpg";
 import flyingBlind from "./FB.jpg";
 import video from "./video.mp4";
+import CheapAndbest from "./Cheap&BestLogo.png";
+import Geetanjali from "./GeetanjaliLogo.png";
+import Headmasters from "./HeadmastersLogo.png";
+import CutAndStyle from "./CutAndStyle.png";
+import JawedHabib from "./JawedHabibLogo.png";
+import MyGlam from "./MyGlamLogo.jpeg";
+import Naturals from "./NaturalsLogo.jpg";
+import Nykaa from "./Nykaa-Logo.png";
+import Studio11 from "./STUDIO11-LOGO.png";
+import ToniAndGuy from "./Toni_and_Guy_logo.png";
+import LakmeLogo from "./LakmeLogo.png";
+import Monsoon from "./MonsoonLogo.png";
+
 
 export const assets = {
     analytic,
@@ -52,6 +65,18 @@ export const assets = {
     staffCommission,
     ghostCustomer,
     flyingBlind,
+    CheapAndbest,
+    CutAndStyle,
+    Geetanjali,
+    Headmasters,
+    JawedHabib,
+    LakmeLogo,
+    Monsoon,
+    MyGlam,
+    Naturals,
+    Nykaa,
+    Studio11,
+    ToniAndGuy,
     setup,
     video,
 }
