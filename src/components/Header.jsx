@@ -74,13 +74,21 @@ export default function Header() {
               Features
             </Link>
 
+            <Link to="/pricing" className="text-gray-700 hover:text-blue-600" onClick={() => { handleNavClick(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+              Pricing
+            </Link>
+
+            <Link to="/#reviews" className="text-gray-700 hover:text-blue-600" onClick={handleNavClick}>Reviews</Link>
+
+            <Link to="/#faq" className="text-gray-700 hover:text-blue-600" onClick={handleNavClick}>FAQ</Link>
+
             {/* Dropdown */}
             <div className="relative inline-block text-left" ref={dropdownRef}>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="inline-flex justify-center items-center cursor-pointer text-gray-700 hover:text-blue-600"
               >
-                Add. Features
+                More
                 <ChevronDownIcon
                   className={`w-4 h-4 transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                 />
@@ -107,11 +115,6 @@ export default function Header() {
               )}
             </div>
 
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600" onClick={() => { handleNavClick(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-              Pricing
-            </Link>
-            <Link to="/#reviews" className="text-gray-700 hover:text-blue-600" onClick={handleNavClick}>Reviews</Link>
-            <Link to="/#faq" className="text-gray-700 hover:text-blue-600" onClick={handleNavClick}>FAQ</Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
