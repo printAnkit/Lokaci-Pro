@@ -27,10 +27,7 @@ export default function Header() {
   // Close menus when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
       }
       if (
@@ -70,17 +67,40 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex space-x-8 font-semibold">
-            <Link to="/features" className=" text-gray-700 hover:text-blue-600 " onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <Link
+              to="/features"
+              className=" text-gray-700 hover:text-blue-600 "
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               Features
             </Link>
 
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600" onClick={() => { handleNavClick(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+            <Link
+              to="/pricing"
+              className="text-gray-700 hover:text-blue-600"
+              onClick={() => {
+                handleNavClick();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
               Pricing
             </Link>
 
-            <Link to="/#reviews" className="text-gray-700 hover:text-blue-600" onClick={handleNavClick}>Reviews</Link>
+            <Link
+              to="/#reviews"
+              className="text-gray-700 hover:text-blue-600"
+              onClick={handleNavClick}
+            >
+              Reviews
+            </Link>
 
-            <Link to="/#faq" className="text-gray-700 hover:text-blue-600" onClick={handleNavClick}>FAQ</Link>
+            <Link
+              to="/#faq"
+              className="text-gray-700 hover:text-blue-600"
+              onClick={handleNavClick}
+            >
+              FAQ
+            </Link>
 
             {/* Dropdown */}
             <div className="relative inline-block text-left" ref={dropdownRef}>
@@ -90,7 +110,9 @@ export default function Header() {
               >
                 More
                 <ChevronDownIcon
-                  className={`w-4 h-4 transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 transform transition-transform duration-200 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
@@ -114,21 +136,30 @@ export default function Header() {
                 </div>
               )}
             </div>
-
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center text-sm text-gray-600">
               <Phone className="h-4 w-4 mr-1" />
-              +91-9876543210
+              <a href="tel:+91987654321">+91-9876543210</a>
             </div>
-            <Link to="auth" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <Link
+              to="auth"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
               Free Demo
             </Link>
           </div>
 
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 

@@ -56,7 +56,6 @@ export default function App() {
         <Route path="ghost-customer" element={<GhostCustomer/>}/>
         <Route path="staff-commission" element={<StaffCommission/>}/>
         <Route path="flying-blind" element={<FlyingBlind/>}/>
-        
         <Route path="temp" element={ <Temp/> }/>
       </Route>
     )
