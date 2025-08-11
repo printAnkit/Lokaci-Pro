@@ -144,7 +144,7 @@ export default function Header() {
               <a href="tel:+91987654321">+91-9876543210</a>
             </div>
             <Link
-              to="auth"
+              to="form"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Free Demo

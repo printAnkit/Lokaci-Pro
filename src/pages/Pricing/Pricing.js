@@ -16,7 +16,7 @@ export const plans = [
     price: "₹7,000",
     period: "/year",
     monthly: "₹583/month",
-    description: "Perfect for solo stylists & small salons",
+    description: "Perfect for small salons getting started",
     popular: false,
     features: [
       "Unlimited appointments & walk-ins",

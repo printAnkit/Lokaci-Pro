@@ -7,7 +7,7 @@ import {
 import RootLayout from "./layout/RootLoyout.jsx";
 import Home from "./pages/Home.jsx";
 import Pricing from "./pages/Pricing/Pricing.jsx";
-import Login from "./pages/Login.jsx";
+import Form from "./pages/Form.jsx";
 import HowItWorks from "./temp/HowItWorks.jsx";
 import CoreBenefit from "./temp/CoreBenefits/CoreBenefit.jsx";
 import Pricings from "./temp/Pricings/Pricings.jsx";
@@ -47,7 +47,7 @@ export default function App() {
         </Route>
 
         <Route path="pricing" element={<Pricing />}/>
-        <Route path="auth" element={<Login />} />
+        <Route path="form" element={<Form />} />
         <Route path="Sample1" element={<HowItWorks />} />
         <Route path="sample2" element={<CoreBenefit />} />
         <Route path="pricing1" element={<Pricings />} />
