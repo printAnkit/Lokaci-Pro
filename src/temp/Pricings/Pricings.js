@@ -7,6 +7,7 @@ import {
   Building,
   Blocks,
 } from "lucide-react";
+import { assets } from "../../assets/assets";
 
 export const plans = [
   {
@@ -103,16 +104,16 @@ export const addOns = [
 ];
 
 export const features = [
-  { title: "Unlimited bookings", subtitle: "" },
-  { title: "Client Appointment", subtitle: "Confirmations & Reminders" },
-  { title: "Email Marketing", subtitle: "" },
-  { title: "Text Message", subtitle: "Marketing*" },
-  { title: "Custom Forms &", subtitle: "Liability Waivers" },
-  { title: "Reserve with Google", subtitle: "" },
-  { title: "Reporting and", subtitle: "Insights" },
-  { title: "Waitlists", subtitle: "" },
-  { title: "No-Show Protection", subtitle: "features**" },
-  { title: "Online Gift Cards**", subtitle: "" },
-  { title: "Memberships and", subtitle: "Packages" },
-  { title: "and more!", subtitle: "" },
+  { title: "Unlimited bookings", icon: assets.appointmentSmall},
+  { title: "Client Appointment Confirmations & Reminders", icon: assets.ClientAppointment },
+  { title: "Email Marketing", icon : assets.Marketing},
+  { title: "Text Message Marketing*", icon : assets.customerSmall},
+  { title: "Custom Forms & Liability Waivers" , icon: assets.CustomForms},
+  { title: "Reserve with Google", icon: assets.Google},
+  { title: "Reporting and Insights", icon: assets.analytic},
+  { title: "Waitlists", icon: assets.Waitlist},
+  { title: "No-Show Protection features**", icon: assets.customer},
+  { title: "Online Gift Cards**", icon : assets.membershipSmall},
+  { title: "Memberships and Packages", icon: assets.Member},
+  { title: "and more!", icon: assets.Benefits},
 ];

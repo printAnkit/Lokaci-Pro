@@ -24,7 +24,7 @@ import manualEverything from "./ME.png";
 import ghostCustomer from "./GC.png";
 import staffCommission from "./SCC.jpg";
 import flyingBlind from "./FB.jpg";
-import video from "./video.mp4";
+import DemoVideo from "./DemoVideo.mp4";
 import CheapAndbest from "./Cheap&BestLogo.png";
 import Geetanjali from "./GeetanjaliLogo.png";
 import Headmasters from "./HeadmastersLogo.png";
@@ -37,6 +37,13 @@ import Studio11 from "./STUDIO11-LOGO.png";
 import ToniAndGuy from "./Toni_and_Guy_logo.png";
 import LakmeLogo from "./LakmeLogo.png";
 import Monsoon from "./MonsoonLogo.png";
+import Marketing from "./Marketing.png"
+import Google from "./Google.png";
+import Waitlist from "./Waitlist.png";
+import ClientAppointment from "./ClientAppointment.png";
+import CustomForms from "./CustomForms.png";
+import Member from "./Member.png";
+import Benefits from "./Benefits.png";
 
 
 export const assets = {
@@ -47,14 +54,20 @@ export const assets = {
     bgImage,
     bookings,
     businessGrowth,
+    Benefits,
     customer,
     customerSmall,
+    ClientAppointment,
+    CustomForms,
+    Google,
     inventory,
     inventorySmall,
     location,
     locationSmall,
     membership,
     membershipSmall,
+    Marketing,
+    Member,
     performance,
     performanceSmall,
     revenue,
@@ -78,5 +91,6 @@ export const assets = {
     Studio11,
     ToniAndGuy,
     setup,
-    video,
+    DemoVideo,
+    Waitlist,
 }

@@ -1,12 +1,10 @@
 import { useState } from "react";
-import {
-  Check,
-  Gift,
-  Calculator,
-  SquareArrowOutUpRight,
-} from "lucide-react";
+import { Check, Gift, Calculator, SquareArrowOutUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { plans, addOns, features } from "./Pricing";
+import FAQ from "../../components/FAQ/FAQ.jsx";
+import { Link } from "react-router-dom";
+import BrandCarousel from "../../components/BrandCarousel.jsx";
 
 export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(1);
@@ -232,7 +230,47 @@ export default function Pricing() {
             </motion.div>
           </div>
         </section>
-        {/* <FAQ title="Lokaci Pricing FAQs" subTitle=""/> */}
+        <section className="flex flex-col justify-center items-center max-w-8xl mx-auto pt-10 ">
+          {/* Hero Section */}
+          <div className="py-10 w-90 md:w-150">
+            <h1 className="text-3xl md:text-4xl font-bold text-black">
+              We don't charge you
+              <span className="text-blue-600"> extra for:</span>
+            </h1>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-4 mb-10">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className=" flex items-center p-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:scale-101 hover:shadow-xl w-80 h-30 "
+              >
+                <div className="flex items-center">
+                  <img src={feature.icon} className="w-18 h-18 text-black" />
+                  <h3 className="text-lg font-semibold text-gray-900 pl-4">
+                    {feature.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-8">
+            <Link
+              onClick={() => window.scrollTo({ top: 0, behaviour: "smooth" })}
+              to="/features"
+              className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg cursor-pointer"
+            >
+              See all included features
+            </Link>
+            <p className="text-gray-800 text-sm mt-4 opacity-80">
+              (Hint: It's all of them.)
+            </p>
+          </div>
+        </section>
+        <FAQ title="Lokaci Pricing" subTitle="FAQs" />
+        <BrandCarousel />
       </section>
     </>
   );

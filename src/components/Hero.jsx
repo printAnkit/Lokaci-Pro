@@ -54,9 +54,9 @@ export default function Hero() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 1 }}
               onClick={() => {
-                  navigate("/auth");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+                navigate("/auth");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg cursor-pointer"
             >
               Get My Salon Organized - ₹7,000/year
@@ -73,10 +73,15 @@ export default function Hero() {
             </motion.button>
           </div>
           {playDemoSelect && (
-            <video width="320" height="240" controls>
-              <source src={assets.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className=" bg-black p-2 ">
+              <p className="text-white mb-1"> India's 1st Real Time Salon Booking App.</p>
+              <div>
+                <video width="320" height="240" controls>
+                  <source src={assets.DemoVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           )}
         </div>
 

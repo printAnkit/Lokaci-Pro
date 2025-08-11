@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { assets } from "../../assets/assets.js";
 import {
   Check,
   Gift,
@@ -160,19 +161,6 @@ export default function pricing() {
                   </div>
                 </div>
               </div>
-
-              {/* Right Side - Image */}
-              {/* <div className="hidden lg:block">
-                <div className="relative">
-                  <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-400/20 to-orange-400/20 backdrop-blur-sm">
-                    <img
-                      src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop"
-                      alt="Professional portrait"
-                      className="w-full h-full object-cover mix-blend-overlay"
-                    />
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </section>
@@ -323,127 +311,46 @@ export default function pricing() {
           </div>
         </section>
 
-        <section className="bg-gray-200">
+        <section className="flex flex-col justify-center items-center max-w-8xl mx-auto pt-10 ">
           {/* Hero Section */}
-          <div className="mt-10 pt-10">
-            <div className="flex items-center justify-start px-8 md:px-16 lg:px-24 ">
-              <h1 className="text-3xl md:text-4xl font-bold text-black leading-tight max-w-2xl">
-                We don't charge you
-                <br />
-                extra for:
-              </h1>
-            </div>
+          <div className="py-10">
+            <h1 className="text-3xl md:text-4xl font-bold text-black">
+              We don't charge you
+              <span className="text-blue-600"> extra for:</span>
+            </h1>
           </div>
 
-          {/* Features Grid */}
-          <div className="px-8 md:px-16 lg:px-24 py-16">
-            <div className="space-y-6">
-              {/* Row 1 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
-                {features.slice(0, 3).map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 mt-1">
-                      <Scissors className="w-6 h-6 text-black" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-black text-lg md:text-xl font-semibold leading-tight">
-                        {feature.title}
-                      </h3>
-                      {feature.subtitle && (
-                        <p className="text-black text-lg md:text-xl font-semibold leading-tight">
-                          {feature.subtitle}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Divider Line */}
-              <div className="border-t border-gray-500 opacity-30"></div>
-
-              {/* Row 2 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
-                {features.slice(3, 6).map((feature, index) => (
-                  <div key={index + 3} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 mt-1">
-                      <Scissors className="w-6 h-6 text-black" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-black text-lg md:text-xl font-semibold leading-tight">
-                        {feature.title}
-                      </h3>
-                      {feature.subtitle && (
-                        <p className="text-black text-lg md:text-xl font-semibold leading-tight">
-                          {feature.subtitle}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Divider Line */}
-              <div className="border-t border-gray-500 opacity-30"></div>
-
-              {/* Row 3 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
-                {features.slice(6, 9).map((feature, index) => (
-                  <div key={index + 6} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 mt-1">
-                      <Scissors className="w-6 h-6 text-black" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-black text-lg md:text-xl font-semibold leading-tight">
-                        {feature.title}
-                      </h3>
-                      {feature.subtitle && (
-                        <p className="text-black text-lg md:text-xl font-semibold leading-tight">
-                          {feature.subtitle}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Divider Line */}
-              <div className="border-t border-gray-500 opacity-30"></div>
-
-              {/* Row 4 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
-                {features.slice(9, 12).map((feature, index) => (
-                  <div key={index + 9} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 mt-1">
-                      <Scissors className="w-6 h-6 text-black" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-black text-lg md:text-xl font-semibold leading-tight">
-                        {feature.title}
-                      </h3>
-                      {feature.subtitle && (
-                        <p className="text-black text-lg md:text-xl font-semibold leading-tight">
-                          {feature.subtitle}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Call to Action */}
-            <div className="text-center mt-16">
-              <Link
-                to="/features"
-                className="bg-gray-800 text-white hover:bg-white hover:text-gray-800  px-8 py-4 rounded-lg font-semibold text-lg shadow-lg cursor-pointer"
+          <div className="flex flex-wrap justify-center items-center gap-4 mb-10">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className=" flex items-center p-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:scale-101 hover:shadow-xl w-80 h-30 border-t-4 border-blue-200"
               >
-                See all included features
-              </Link>
-              <p className="text-gray-800 text-sm mt-4 opacity-80">
-                (Hint: It's all of them.)
-              </p>
-            </div>
+                <div className="flex items-center">
+                  <img
+                      src={feature.icon}
+                      className="w-18 h-18 text-black"
+                    />
+                  <h3 className="text-lg font-semibold text-gray-900 pl-4">
+                    {feature.title}
+                  </h3>
+                </div>
+                
+              </div>
+            ))}
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-8">
+            <Link
+              to="/features"
+              className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg cursor-pointer"
+            >
+              See all included features
+            </Link>
+            <p className="text-gray-800 text-sm mt-4 opacity-80">
+              (Hint: It's all of them.)
+            </p>
           </div>
         </section>
         <FAQ title="Lokaci Pricing FAQs" subTitle="" />

@@ -1,9 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { mainFeatures } from "./CoreBenefits";
+import { motion } from "motion/react";
 import {
   ArrowRight,
   Calendar1,
-  CircleSmall,
   CreditCard,
   FolderCode,
   Mail,
@@ -41,12 +41,17 @@ export default function CoreBenefits() {
 
       <section>
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-          <h1 className="text-2xl md:text-4xl mb-20 text-black">
+          <motion.h1
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-2xl md:text-4xl mb-20 text-black"
+          >
             Features That
             <span className="block md:text-4xl font-semibold text-blue-600">
               Actually Make You Money
             </span>
-          </h1>
+          </motion.h1>
           <div className="max-w-6xl flex mx-auto ">
             <div className="space-y-15 md:space-y-40">
               {mainFeatures.map((feature, index) => {
@@ -55,7 +60,11 @@ export default function CoreBenefits() {
                 return (
                   <div key={index} className={`flex flex-col`}>
                     <div className="flex flex-col lg:flex-row items-center justify-between md:gap-20 ">
-                      <div>
+                      <motion.div
+                        initial={{ y: 30, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                      >
                         <div
                           className={`inline-flex rounded-2xl text-${feature.color}-400 mb-6`}
                         >
@@ -76,15 +85,23 @@ export default function CoreBenefits() {
                             ✨ {feature.benefit}
                           </span>
                         </div>
-                      </div>
+                      </motion.div>
 
                       <div className=" backdrop-blur-sm p-6 rounded-2xl">
-                        <h3 className="text-2xl font-semibold text-blue-700 mb-6">
+                        <motion.h3
+                          initial={{ y: 30, opacity: 0 }}
+                          whileInView={{ y: 0, opacity: 1 }}
+                          transition={{ duration: 0.5, delay: 0.5 }}
+                          className="text-2xl font-semibold text-blue-700 mb-6"
+                        >
                           Key Features:
-                        </h3>
+                        </motion.h3>
                         <div className="flex flex-col gap-1">
                           {feature.features.map((item, itemIndex) => (
-                            <div
+                            <motion.div
+                              initial={{ y: 30, opacity: 0 }}
+                              whileInView={{ y: 0, opacity: 1 }}
+                              transition={{ duration: 0.5, delay: 0.5 }}
                               key={itemIndex}
                               className="flex items-start space-x-3 md:space-y-4"
                             >
@@ -92,13 +109,18 @@ export default function CoreBenefits() {
                               <span className="text-black text-lg font-semibold">
                                 {item}
                               </span>
-                            </div>
+                            </motion.div>
                           ))}
                         </div>
                       </div>
                     </div>
 
-                    <div className="flex justify-center items-center m-4 mt-0 ">
+                    <motion.div
+                      initial={{ y: 30, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      className="flex justify-center items-center m-4 mt-0 "
+                    >
                       <Link
                         to={feature.navigatePage}
                         onClick={() => {
@@ -111,14 +133,14 @@ export default function CoreBenefits() {
                         </button>
                         <ArrowRight className=" hover:translate-x-1 " />
                       </Link>
-                    </div>
+                    </motion.div>
                   </div>
                 );
               })}
             </div>
           </div>
           {/* Integration Section */}
-          <section className="py-20">
+          <section className="py-20 ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
@@ -170,7 +192,7 @@ export default function CoreBenefits() {
                 ].map((integration, index) => (
                   <div
                     key={index}
-                    className="p-8 rounded-xl shadow-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 "
+                    className="p-8 rounded-xl shadow-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 hover:shadow-lg "
                   >
                     <integration.icon className="text-4xl mb-4" />
                     <h3 className="text-xl font-semibold text-black mb-3">

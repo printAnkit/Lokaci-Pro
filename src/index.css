@@ -15,7 +15,7 @@ html {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-256px * 12)); /* 12 logos * (192px width + 64px gap) */
+    transform: translateX(calc(-256px * 11)); /* 11 logos * (192px width + 64px gap) */
   }
 }
 
@@ -24,7 +24,7 @@ html {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-320px * 12)); /* 12 logos * (288px width + 32px gap) */
+    transform: translateX(calc(-320px * 11)); /* 11 logos * (288px width + 32px gap) */
   }
 }
 
