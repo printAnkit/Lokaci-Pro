@@ -1,5 +1,6 @@
 import { CornerRightDown, MessageSquare, Rocket, SquareCheckBig } from "lucide-react";
 import cra from "../../assets/CRA.png";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -168,9 +169,11 @@ export default function CRA() {
           <p className="text-gray-700 mb-6">
             Delight, reward, and re-engage your clients automatically.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+          <Link
+            to="/get-started"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
             Automate Retention Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

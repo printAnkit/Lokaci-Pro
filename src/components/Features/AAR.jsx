@@ -1,12 +1,11 @@
 import {
   BarChart3,
-  CornerLeftDown,
   CornerRightDown,
   Rocket,
   SquareCheckBig,
-  Star,
 } from "lucide-react";
 import pi from "../../assets/PI.png";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -170,9 +169,11 @@ export default function AAR() {
           <p className="text-gray-700 mb-6">
             With Profit Intelligence, you’re not just running your business - you’re growing it with clarity and confidence.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+          <Link
+            to="/get-started"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
             Activate Profit Insights
-          </button>
+          </Link>
         </div>
       </div>
     </div>

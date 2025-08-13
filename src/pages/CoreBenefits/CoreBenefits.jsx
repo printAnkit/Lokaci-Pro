@@ -216,7 +216,7 @@ export default function CoreBenefits() {
               </p>
               <button
                 onClick={() => {
-                  navigate("auth");
+                  navigate("/get-started");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-200 transform hover:scale-105 cursor-pointer"

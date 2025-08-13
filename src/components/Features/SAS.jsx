@@ -1,5 +1,6 @@
 import { Calendar1, CornerRightDown, Rocket, SquareCheckBig } from "lucide-react";
 import sas from "../../assets/appointmentSAS.png";
+import { Link } from "react-router-dom";
 const features = [
   {
     title: "Real-Time Calendar Sync",
@@ -184,9 +185,11 @@ export default function SAS() {
             Focus on what matters most: Growing your business and serving your
             clients.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+          <Link
+            to="/get-started"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
             Get Started Today
-          </button>
+          </Link>
         </div>
       </div>
     </div>

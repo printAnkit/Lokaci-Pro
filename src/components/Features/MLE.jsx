@@ -1,5 +1,6 @@
 import { CornerRightDown, Gift, Rocket, SquareCheckBig } from "lucide-react";
 import mle from "../../assets/MLE.png";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -174,9 +175,11 @@ export default function MLE() {
             Automate memberships, referrals, and cashback and keep clients
             coming back for more.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+          <Link
+            to="/get-started"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
             Launch Loyalty Engine
-          </button>
+          </Link>
         </div>
       </div>
     </div>

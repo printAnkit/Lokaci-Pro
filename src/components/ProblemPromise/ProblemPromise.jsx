@@ -39,8 +39,8 @@ export default function ProblemPromise() {
           {problems.map((problem, index) => (
             <Link
               key={index}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               to={problem.link}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}

@@ -3,11 +3,13 @@ import { Check, Gift, Calculator, SquareArrowOutUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { plans, addOns, features } from "./Pricing";
 import FAQ from "../../components/FAQ/FAQ.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BrandCarousel from "../../components/BrandCarousel.jsx";
 
 export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(1);
+
+  const navigate = useNavigate();
 
   const handlePlanSelect = (planIndex) => {
     setSelectedPlan(planIndex);
@@ -141,7 +143,7 @@ export default function Pricing() {
                   </div>
                   <div>
                     <button
-                      onClick={() => handlePlanSelect(index)}
+                      onClick={() => {navigate("/get-started"), handlePlanSelect(index), window.scrollTo({ top: 0, behavior: "smooth" })}}
                       className={`flex items-center justify-center w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 cursor-pointer ${
                         selectedPlan === index
                           ? "bg-gray-950 text-white hover:bg-gray-950 shadow-lg"
@@ -258,9 +260,9 @@ export default function Pricing() {
           {/* Call to Action */}
           <div className="text-center mt-8">
             <Link
-              onClick={() => window.scrollTo({ top: 0, behaviour: "smooth" })}
               to="/features"
               className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg cursor-pointer"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               See all included features
             </Link>

@@ -110,6 +110,7 @@ export default function GhostCustomers() {
           <Link
             to="/get-started"
             className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             Start Retaining Customers →
           </Link>

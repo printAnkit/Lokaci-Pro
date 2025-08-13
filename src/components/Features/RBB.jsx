@@ -1,5 +1,6 @@
 import { CornerRightDown, Landmark, Rocket, SquareCheckBig } from "lucide-react";
 import rbb from "../../assets/RBB.png";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -178,9 +179,11 @@ export default function RBB() {
           <p className="text-gray-700 mb-6">
             Upsell more. Sell smarter. Get paid faster all in one system.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+          <Link 
+            to="/get-started"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
             Start Boosting Revenue
-          </button>
+          </Link>
         </div>
       </div>
     </div>

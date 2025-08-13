@@ -54,7 +54,7 @@ export default function Hero() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 1 }}
               onClick={() => {
-                navigate("/auth");
+                navigate("get-started");
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg cursor-pointer"

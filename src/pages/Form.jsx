@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 import {
   Phone,
   Mail,
@@ -9,59 +11,6 @@ import {
   Check,
   Star,
 } from "lucide-react";
-
-const pricingPlans = [
-  {
-    id: "starter",
-    name: "STARTER PLAN",
-    price: "₹7,000",
-    period: "/year",
-    description: "Perfect for small salons getting started",
-    features: [
-      "Unlimited appointments & walk-ins",
-      "GST-ready billing & invoicing",
-      "Basic customer database",
-      "WhatsApp booking confirmations",
-      "Daily/weekly reports",
-      "Phone & chat support",
-    ],
-    popular: false,
-  },
-  {
-    id: "professional",
-    name: "GROWTH PLAN",
-    price: "₹14,000",
-    period: "/year",
-    description: "For salons ready to scale (3-10 staff)",
-    features: [
-      "Everything in Starter, plus:",
-      "Advanced loyalty & membership system",
-      "Inventory management with alerts",
-      "500 automated WhatsApp messages/month",
-      "Staff performance analytics",
-      "Customer retention campaigns",
-      "Package & combo deals",
-    ],
-    popular: true,
-  },
-  {
-    id: "enterprise",
-    name: "ELITE PLAN",
-    price: "₹25,000",
-    period: "/year",
-    description: "For franchises & multi-location salons",
-    features: [
-      "Everything in Growth, plus:",
-      "Unlimited locations management",
-      "2,000 WhatsApp messages/month",
-      "Advanced analytics & profit reports",
-      "Priority support (2-hour response)",
-      "Custom integrations",
-      "Dedicated account manager",
-    ],
-    popular: false,
-  },
-];
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -77,6 +26,20 @@ export default function Form() {
     pricingPlan: "professional",
     message: "",
   });
+
+  const initialFormData = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    businessName: "",
+    businessType: "",
+    location: "",
+    staffCount: "",
+    currentSolution: "",
+    pricingPlan: "professional",
+    message: "",
+  };
 
   const [errors, setErrors] = useState({});
 
@@ -99,7 +62,8 @@ export default function Form() {
     if (!formData.email.trim()) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
       newErrors.email = "Email is invalid";
-    if (formData.phone.trim().length != 10) newErrors.phone = "Phone number is required";
+    if (formData.phone.trim().length != 10)
+      newErrors.phone = "Phone number is required";
     if (!formData.businessName.trim())
       newErrors.businessName = "Business name is required";
     if (!formData.location.trim()) newErrors.location = "Location is required";
@@ -108,21 +72,39 @@ export default function Form() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
-  e.preventDefault();
-  if (validateForm()) {
-    console.log("Form submitted:", formData);
-    alert("Thank you for your enquiry! We'll get back to you within 24 hours.");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    // Reset form after submission
-    setFormData(initialFormData);
-    setErrors({});
-  }
-};
+    if (validateForm()) {
+      const formData = new FormData(e.target);
 
+      formData.append("access_key", "bfdeff02-449c-4806-948c-e53c3631b6c4");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      toast.success("Thank you for your enquiry! We'll get back to you within 24 hours.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
+      // Reset form after submission
+      setFormData(initialFormData);
+      setErrors({});
+    }
+  };
 
   return (
     <div className="min-h-screen">
+      <ToastContainer />
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -390,80 +372,7 @@ export default function Form() {
                 </div>
               </div>
             </div>
-
-            {/* Pricing Plans Section */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <div className="flex items-center mb-8">
-                <CreditCard className="h-6 w-6 text-blue-600 mr-3" />
-                <h2 className="text-2xl font-semibold text-gray-900">
-                  Choose Your Plan
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {pricingPlans.map((plan) => (
-                  <div
-                    key={plan.id}
-                    className={`relative border-2 rounded-xl p-6 cursor-pointer transition-all duration-200 hover:shadow-lg ${
-                      formData.pricingPlan === plan.id
-                        ? "border-blue-500 bg-purple-50"
-                        : "border-gray-200 hover:border-gray-300"
-                    }`}
-                    onClick={() =>
-                      setFormData((prev) => ({ ...prev, pricingPlan: plan.id }))
-                    }
-                  >
-                    {plan.popular && (
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-blue-600 text-white px-4 py-1 text-sm font-medium rounded-full flex items-center">
-                          <Star className="h-4 w-4 mr-1" />
-                          Most Popular
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="flex items-center mb-4">
-                      <input
-                        type="radio"
-                        id={plan.id}
-                        name="pricingPlan"
-                        value={plan.id}
-                        checked={formData.pricingPlan === plan.id}
-                        onChange={handleInputChange}
-                        className="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300"
-                      />
-                      <label
-                        htmlFor={plan.id}
-                        className="ml-3 text-lg font-semibold text-gray-900 cursor-pointer"
-                      >
-                        {plan.name}
-                      </label>
-                    </div>
-
-                    <div className="mb-4">
-                      <span className="text-3xl font-bold text-gray-900">
-                        {plan.price}
-                      </span>
-                      <span className="text-gray-500">{plan.period}</span>
-                    </div>
-
-                    <p className="text-gray-600 mb-6">{plan.description}</p>
-
-                    <ul className="space-y-3">
-                      {plan.features.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <Check className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-
+            
             {/* Additional Information */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">

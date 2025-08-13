@@ -48,9 +48,9 @@ export default function HowItWorks() {
         {/* CTA */}
         <section className="text-center pt-8">
           <Link
-            to="auth"
-            onClick={() => window.scrollTo({ top:0, behavior: "smooth" })}
+            to="get-started"
             className="font-semibold inline-block bg-white text-blue-600 px-10 py-4 rounded-full shadow-white hover:translate-y-1 hover:shadow-sm hover:text-blue-700 transition "
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             Get Started
           </Link>

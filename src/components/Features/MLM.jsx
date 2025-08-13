@@ -1,5 +1,6 @@
 import { Building, CornerRightDown, Rocket, SquareCheckBig } from "lucide-react";
 import mlm from "../../assets/MLM.png";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -171,9 +172,11 @@ export default function MultiLocationMastery() {
           <p className="text-gray-700 mb-6">
             Save hours every week and scale like a pro Multi Location Mastery makes it effortless.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+          <Link 
+            to="/get-started"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
             Centralize My Locations
-          </button>
+          </Link>
         </div>
       </div>
     </div>

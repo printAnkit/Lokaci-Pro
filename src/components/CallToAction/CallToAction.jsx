@@ -20,7 +20,7 @@ export default function CallToAction() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <button
             onClick={() => {
-                  navigate("/auth");
+                  navigate("get-started");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
             className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg cursor-pointer ">

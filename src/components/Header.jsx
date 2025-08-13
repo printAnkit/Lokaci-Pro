@@ -57,10 +57,7 @@ export default function Header() {
             <Link
               to="/"
               className="text-3xl font-bold text-blue-600 cursor-pointer"
-              onClick={() => {
-                handleNavClick();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Lokaci Pro
             </Link>
@@ -78,27 +75,16 @@ export default function Header() {
             <Link
               to="/pricing"
               className="text-gray-700 hover:text-blue-600"
-              onClick={() => {
-                handleNavClick();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Pricing
             </Link>
 
-            <Link
-              to="/#reviews"
-              className="text-gray-700 hover:text-blue-600"
-              onClick={handleNavClick}
-            >
+            <Link to="/#reviews" className="text-gray-700 hover:text-blue-600">
               Reviews
             </Link>
 
-            <Link
-              to="/#faq"
-              className="text-gray-700 hover:text-blue-600"
-              onClick={handleNavClick}
-            >
+            <Link to="/#faq" className="text-gray-700 hover:text-blue-600">
               FAQ
             </Link>
 
@@ -144,8 +130,9 @@ export default function Header() {
               <a href="tel:+91987654321">+91-9876543210</a>
             </div>
             <Link
-              to="form"
+              to="get-started"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Free Demo
             </Link>
@@ -186,7 +173,7 @@ export default function Header() {
               ))}
 
               <Link
-                to="auth"
+                to="get-started"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg w-full hover:bg-blue-700 transition-colors"
                 onClick={() => {
                   handleNavClick();

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import sic from "../../assets/SIC.png";
 import { CornerRightDown, Package, Rocket, SquareCheckBig } from "lucide-react";
 
@@ -180,9 +181,11 @@ export default function SIC() {
             Say goodbye to stockouts and overordering. Automate your inventory
             today.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+          <Link
+            to="/get-started"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
             Start Managing Smarter
-          </button>
+          </Link>
         </div>
       </div>
     </div>

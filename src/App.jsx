@@ -17,7 +17,6 @@ import ManualEverything from "./components/ProblemPromise/ManualEverything.jsx";
 import GhostCustomer from "./components/ProblemPromise/GhostCustomer.jsx";
 import StaffCommission from "./components/ProblemPromise/StaffCommission.jsx";
 import FlyingBlind from "./components/ProblemPromise/FlyingBlind.jsx";
-import Temp from "./components/ProblemPromise/Temp.jsx";
 import SAS from "./components/Features/SAS.jsx";
 import FeaturesLayout from "./layout/FeaturesLayout.jsx"
 import SPT from "./components/Features/SPT.jsx";
@@ -47,7 +46,7 @@ export default function App() {
         </Route>
 
         <Route path="pricing" element={<Pricing />}/>
-        <Route path="form" element={<Form />} />
+        <Route path="get-started" element={<Form />} />
         <Route path="Sample1" element={<HowItWorks />} />
         <Route path="sample2" element={<CoreBenefit />} />
         <Route path="pricing1" element={<Pricings />} />
@@ -56,7 +55,6 @@ export default function App() {
         <Route path="ghost-customer" element={<GhostCustomer/>}/>
         <Route path="staff-commission" element={<StaffCommission/>}/>
         <Route path="flying-blind" element={<FlyingBlind/>}/>
-        <Route path="temp" element={ <Temp/> }/>
       </Route>
     )
   );
