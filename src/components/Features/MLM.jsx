@@ -1,4 +1,9 @@
-import { Building, CornerRightDown, Rocket, SquareCheckBig } from "lucide-react";
+import {
+  Building,
+  CornerRightDown,
+  Rocket,
+  SquareCheckBig,
+} from "lucide-react";
 import mlm from "../../assets/MLM.png";
 import { Link } from "react-router-dom";
 
@@ -102,15 +107,15 @@ export default function MultiLocationMastery() {
         <div className="flex flex-col items-center gap-4 mb-10">
           <div>
             <div className="flex flex-col items-center justify-center gap-4 ">
-                <Building className="w-10 h-11 text-black"/>
+              <Building className="w-10 h-11 text-black" />
               <h1 className="text-black text-3xl md:text-5xl font-bold text-center mb-4 md:mb-8">
                 Multi Location Mastery
               </h1>
             </div>
             <p className="text-gray-700 text-lg font-semibold text-center mb-10 max-w-5xl mx-auto">
-              Manage 1 or 100+ salons from a single dashboard. Save time, simplify
-              operations, and scale with confidence - this is multi-location
-              control done right.
+              Manage 1 or 100+ salons from a single dashboard. Save time,
+              simplify operations, and scale with confidence - this is
+              multi-location control done right.
             </p>
           </div>
           <div className="border-1 rounded-lg md:rounded-3xl  overflow-hidden">
@@ -120,7 +125,9 @@ export default function MultiLocationMastery() {
 
         {/* Features Section */}
         <div className="flex flex-row gap-4 items-center justify-center mt-20 md:mb-10 ">
-          <h1 className="text-3xl md:text-5xl font-bold text-black ">Features</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-black ">
+            Features
+          </h1>
           <CornerRightDown className=" size-8 mt-6 text-black " />
         </div>
         <div className="flex flex-wrap justify-center gap-10">
@@ -146,7 +153,8 @@ export default function MultiLocationMastery() {
           <div className="flex items-center justify-center text-center mb-6">
             <Rocket className="w-15 h-12 text-black" />
             <h2 className="text-3xl font-bold ">
-              Why Choose <span className="text-gray-900">"Lokaci Pro"</span> Multi-Location Mastery?
+              Why Choose <span className="text-gray-900">"Lokaci Pro"</span>{" "}
+              Multi-Location Mastery?
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -170,11 +178,14 @@ export default function MultiLocationMastery() {
             Control Every Location, From Anywhere
           </h3>
           <p className="text-gray-700 mb-6">
-            Save hours every week and scale like a pro Multi Location Mastery makes it effortless.
+            Save hours every week and scale like a pro Multi Location Mastery
+            makes it effortless.
           </p>
-          <Link 
+          <Link
             to="/get-started"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Centralize My Locations
           </Link>
         </div>

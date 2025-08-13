@@ -1,5 +1,5 @@
 import { CornerRightDown, Rocket, SquareCheckBig, Users } from "lucide-react";
-import spt from "../../assets/SPT.png"
+import spt from "../../assets/SPT.png";
 import { Link } from "react-router-dom";
 
 const features = [
@@ -101,16 +101,16 @@ export default function SPT() {
         <div className="flex flex-col items-center gap-4 mb-10">
           <div>
             <div className="flex flex-col items-center justify-center gap-4 ">
-                <Users className="w-10 h-11 text-black"/>
+              <Users className="w-10 h-11 text-black" />
               <h1 className="text-black text-3xl md:text-5xl font-bold text-center mb-4 md:mb-8">
                 Staff Performance Tracking
               </h1>
             </div>
             <p className="text-gray-700 text-lg font-semibold text-center mb-10 max-w-5xl mx-auto">
-              Know exactly who’s making you money. Our Staff Performance Tracking
-          tool offers real-time analytics, automatic commission calculations,
-          and full leave management, giving you insights that drive smarter
-          staffing decisions and business growth.
+              Know exactly who’s making you money. Our Staff Performance
+              Tracking tool offers real-time analytics, automatic commission
+              calculations, and full leave management, giving you insights that
+              drive smarter staffing decisions and business growth.
             </p>
           </div>
           <div className="border-1 rounded-lg md:rounded-3xl overflow-hidden">
@@ -120,7 +120,9 @@ export default function SPT() {
 
         {/* Features Section */}
         <div className="flex flex-row gap-4 items-center justify-center mt-20 md:mb-10 ">
-          <h1 className="text-3xl md:text-5xl font-bold text-black ">Features</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-black ">
+            Features
+          </h1>
           <CornerRightDown className=" size-8 mt-6 text-black " />
         </div>
         <div className="flex flex-wrap justify-center gap-10">
@@ -146,7 +148,8 @@ export default function SPT() {
           <div className="flex items-center justify-center text-center mb-6">
             <Rocket className="w-15 h-12 text-black" />
             <h2 className="text-3xl font-bold ">
-              Why Use <span className="text-gray-900">"Lokaci Pro"</span> Staff Performance Tracking?
+              Why Use <span className="text-gray-900">"Lokaci Pro"</span> Staff
+              Performance Tracking?
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -175,7 +178,9 @@ export default function SPT() {
           </p>
           <Link
             to="/get-started"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Start Tracking Now
           </Link>
         </div>

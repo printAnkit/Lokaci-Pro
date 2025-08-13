@@ -1,4 +1,9 @@
-import { Calendar1, CornerRightDown, Rocket, SquareCheckBig } from "lucide-react";
+import {
+  Calendar1,
+  CornerRightDown,
+  Rocket,
+  SquareCheckBig,
+} from "lucide-react";
 import sas from "../../assets/appointmentSAS.png";
 import { Link } from "react-router-dom";
 const features = [
@@ -110,7 +115,7 @@ export default function SAS() {
         <div className="flex flex-col items-center gap-4 mb-10">
           <div>
             <div className="flex flex-col items-center justify-center gap-4 ">
-                <Calendar1 className="w-10 h-11 text-black"/>
+              <Calendar1 className="w-10 h-11 text-black" />
               <h1 className="text-black text-3xl md:text-5xl font-bold text-center mb-4 md:mb-8">
                 Smart Appointment System
               </h1>
@@ -187,7 +192,9 @@ export default function SAS() {
           </p>
           <Link
             to="/get-started"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Get Started Today
           </Link>
         </div>

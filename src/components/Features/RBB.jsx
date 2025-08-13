@@ -1,4 +1,9 @@
-import { CornerRightDown, Landmark, Rocket, SquareCheckBig } from "lucide-react";
+import {
+  CornerRightDown,
+  Landmark,
+  Rocket,
+  SquareCheckBig,
+} from "lucide-react";
 import rbb from "../../assets/RBB.png";
 import { Link } from "react-router-dom";
 
@@ -108,7 +113,7 @@ export default function RBB() {
         <div className="flex flex-col items-center gap-4 mb-10">
           <div>
             <div className="flex flex-col items-center justify-center gap-4 ">
-                <Landmark className="w-10 h-11 text-black"/>
+              <Landmark className="w-10 h-11 text-black" />
               <h1 className="text-black text-3xl md:text-5xl font-bold text-center mb-4 md:mb-8">
                 Revenue Boosting Billing
               </h1>
@@ -127,7 +132,9 @@ export default function RBB() {
 
         {/* Features Section */}
         <div className="flex flex-row gap-4 items-center justify-center mt-20 md:mb-10 ">
-          <h1 className="text-3xl md:text-5xl font-bold text-black ">Features</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-black ">
+            Features
+          </h1>
           <CornerRightDown className=" size-8 mt-6 text-black " />
         </div>
         <div className="flex flex-wrap justify-center gap-10">
@@ -153,7 +160,8 @@ export default function RBB() {
           <div className="flex items-center justify-center text-center mb-6">
             <Rocket className="w-15 h-12 text-black" />
             <h2 className="text-3xl font-bold ">
-              Why Choose <span className="text-gray-900">"Lokaci Pro"</span> Revenue-Boosting Billing?
+              Why Choose <span className="text-gray-900">"Lokaci Pro"</span>{" "}
+              Revenue-Boosting Billing?
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -179,9 +187,11 @@ export default function RBB() {
           <p className="text-gray-700 mb-6">
             Upsell more. Sell smarter. Get paid faster all in one system.
           </p>
-          <Link 
+          <Link
             to="/get-started"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer">
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition cursor-pointer"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Start Boosting Revenue
           </Link>
         </div>
