@@ -7,9 +7,6 @@ import {
   MapPin,
   Users,
   Calendar,
-  CreditCard,
-  Check,
-  Star,
 } from "lucide-react";
 
 export default function Form() {
@@ -23,7 +20,6 @@ export default function Form() {
     location: "",
     staffCount: "",
     currentSolution: "",
-    pricingPlan: "professional",
     message: "",
   });
 
@@ -37,7 +33,6 @@ export default function Form() {
     location: "",
     staffCount: "",
     currentSolution: "",
-    pricingPlan: "professional",
     message: "",
   };
 
@@ -372,7 +367,7 @@ export default function Form() {
                 </div>
               </div>
             </div>
-            
+
             {/* Additional Information */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
