@@ -105,19 +105,26 @@ export default function Header() {
               {isOpen && (
                 <div className="absolute z-10 mt-2 w-50 rounded-md bg-white shadow-lg ring-1 ring-gray-500 ring-opacity-5">
                   <div className="py-1 flex flex-col m-2">
-                    {["sample1", "sample2", "pricing1"].map((route, i) => (
                       <Link
-                        key={i}
-                        to={`/${route}`}
-                        className="m-2"
+                        to="about"
+                        className="m-2 text-gray-800 hover:text-blue-600"
                         onClick={() => {
                           setIsOpen(false);
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
                       >
-                        Sample Feature{i + 1}
+                        About
                       </Link>
-                    ))}
+                      <Link
+                        to="contact"
+                        className="m-2 text-gray-800 hover:text-blue-600"
+                        onClick={() => {
+                          setIsOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Contact Us
+                      </Link>
                   </div>
                 </div>
               )}

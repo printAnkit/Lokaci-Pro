@@ -8,9 +8,6 @@ import RootLayout from "./layout/RootLoyout.jsx";
 import Home from "./pages/Home.jsx";
 import Pricing from "./pages/Pricing/Pricing.jsx";
 import Form from "./pages/Form.jsx";
-import HowItWorks from "./temp/HowItWorks.jsx";
-import CoreBenefit from "./temp/CoreBenefits/CoreBenefit.jsx";
-import Pricings from "./temp/Pricings/Pricings.jsx";
 import CoreBenefits from "./pages/CoreBenefits/CoreBenefits.jsx";
 import WhatsappBookingChaos from "./components/ProblemPromise/WhatsappBookingChaos.jsx";
 import ManualEverything from "./components/ProblemPromise/ManualEverything.jsx";
@@ -26,6 +23,10 @@ import CRA from "./components/Features/CRA.jsx";
 import MLE from "./components/Features/MLE.jsx";
 import MLM from "./components/Features/MLM.jsx";
 import AAR from "./components/Features/AAR.jsx";
+import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import Terms from "./pages/Terms.jsx";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -47,9 +48,12 @@ export default function App() {
 
         <Route path="pricing" element={<Pricing />}/>
         <Route path="get-started" element={<Form />} />
-        <Route path="Sample1" element={<HowItWorks />} />
-        <Route path="sample2" element={<CoreBenefit />} />
-        <Route path="pricing1" element={<Pricings />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="terms-of-use" element={<Terms/>} />
+
+        
         <Route path="whatsapp-chaos" element={<WhatsappBookingChaos/>}/>
         <Route path="manual-everything" element={ <ManualEverything/> } />
         <Route path="ghost-customer" element={<GhostCustomer/>}/>

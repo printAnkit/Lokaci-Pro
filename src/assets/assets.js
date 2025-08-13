@@ -44,6 +44,7 @@ import ClientAppointment from "./ClientAppointment.png";
 import CustomForms from "./CustomForms.png";
 import Member from "./Member.png";
 import Benefits from "./Benefits.png";
+import logo from "./logo.jpeg";
 
 
 export const assets = {
@@ -93,4 +94,5 @@ export const assets = {
     setup,
     DemoVideo,
     Waitlist,
+    logo,
 }

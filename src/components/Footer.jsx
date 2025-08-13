@@ -53,48 +53,61 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about"
+                  onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   About Lokaci
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#pricing"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Support Center
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
-                  to="auth"
+                  to="/privacy"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms-of-use"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/pricing"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Support Center
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/get-started"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
@@ -157,9 +170,13 @@ export default function Footer() {
             ⚡ Limited Time: Save ₹2,000 on your first year
           </p>
           <p className="mb-2">Only 47 spots remaining at launch pricing</p>
-          <button className="bg-white text-red-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors cursor-pointer">
+          <Link
+            to="/get-started"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="bg-white text-red-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors cursor-pointer"
+          >
             Claim Your Discount Now
-          </button>
+          </Link>
         </div>
       </div>
     </footer>
