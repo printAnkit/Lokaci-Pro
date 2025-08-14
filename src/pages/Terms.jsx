@@ -1,204 +1,507 @@
 import React from 'react';
+import { FileText, Users, Shield, AlertTriangle, Scale, CreditCard, MessageSquare, Settings, Phone, Gavel } from 'lucide-react';
 
-const TermsOfUse = () => {
+function App() {
+  const sections = [
+    {
+      id: 'introduction',
+      title: 'Introduction',
+      icon: <FileText className="h-6 w-6" />
+    },
+    {
+      id: 'obligations',
+      title: 'Obligations',
+      icon: <Users className="h-6 w-6" />
+    },
+    {
+      id: 'rights-limits',
+      title: 'Rights and Limits',
+      icon: <Shield className="h-6 w-6" />
+    },
+    {
+      id: 'disclaimer',
+      title: 'Disclaimer & Liability',
+      icon: <AlertTriangle className="h-6 w-6" />
+    },
+    {
+      id: 'termination',
+      title: 'Termination',
+      icon: <Settings className="h-6 w-6" />
+    },
+    {
+      id: 'fees-payments',
+      title: 'Fees & Payments',
+      icon: <CreditCard className="h-6 w-6" />
+    },
+    {
+      id: 'dispute-resolution',
+      title: 'Dispute Resolution',
+      icon: <Gavel className="h-6 w-6" />
+    },
+    {
+      id: 'contact',
+      title: 'Contact Us',
+      icon: <Phone className="h-6 w-6" />
+    }
+  ];
+
   return (
-    <div className="px-6 py-12 max-w-5xl mx-auto text-gray-800 bg-white">
-      <h1 className="text-4xl font-bold mb-8 text-center text-indigo-700">Terms of Use of Lokaci</h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
 
-      <section className="mb-6">
-        <p className="mb-4">
-          Welcome to <strong>LOKACI</strong>. This document is an electronic record in terms of the Information Technology Act, 2000
-          and published in accordance with Rule 3 of the Information Technology (Intermediaries guidelines) Rules, 2011.
-        </p>
-        <p className="mb-4">
-          Your use of the App/Website and services offered is subject to and governed by the following terms. By accessing or
-          using the platform, you agree to be bound by these terms. Please read them carefully.
-        </p>
-      </section>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Table of Contents */}
+          <aside className="lg:col-span-1">
+            <div className="bg-white rounded-xl shadow-sm border border-slate-200/60 p-6 sticky top-24">
+              <h2 className="font-semibold text-slate-800 mb-4">Table of Contents</h2>
+              <nav className="space-y-2">
+                {sections.map((section) => (
+                  <a
+                    key={section.id}
+                    href={`#${section.id}`}
+                    className="flex items-center space-x-3 p-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-indigo-600 transition-colors duration-200"
+                  >
+                    <span className="text-slate-400">{section.icon}</span>
+                    <span>{section.title}</span>
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </aside>
 
-      {/* INTRODUCTION */}
-      <Section title="1. Introduction">
-        <Subsection title="1.1 Translation of the terms">
-          LOKACI may provide translations for convenience, but the English version prevails in case of conflicts.
-        </Subsection>
-        <Subsection title="1.2 Definitions">
-          "YOU" or “employee” refers to any natural or legal person registered on the App. "We", "Us", "Our" refer to LOKACI.com.
-        </Subsection>
-        <Subsection title="1.3 Use of another’s account">
-          You may not impersonate or access the platform via someone else’s account unless authorized.
-        </Subsection>
-      </Section>
+          {/* Main Content */}
+          <main className="lg:col-span-3">
+            <div className="bg-white rounded-xl shadow-sm border border-slate-200/60 overflow-hidden">
+              
+              {/* Welcome Section */}
+              <section className="p-8 border-b border-slate-100">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-indigo-100 rounded-lg p-2">
+                    <Scale className="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">Terms of Use</h2>
+                </div>
+                
+                <div className="prose prose-slate max-w-none">
+                  <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                    Welcome to LOKACI. This document is an electronic record in terms of the Information Technology Act, 2000 and published in accordance with Rule 3 of the Information Technology (Intermediaries guidelines) Rules, 2011.
+                  </p>
+                  
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                    <h3 className="font-semibold text-blue-800 mb-2">Agreement to Terms</h3>
+                    <p className="text-blue-700 text-sm">
+                      Your use of the App/Website and services offered is subject to and governed by the following terms. By accessing or using the platform, you agree to be bound by these terms. Please read them carefully.
+                    </p>
+                  </div>
+                </div>
+              </section>
 
-      {/* OBLIGATIONS */}
-      <Section title="2. Obligations">
-        <Subsection title="2.1 Membership Eligibility">
-          Only legally competent individuals may use the platform. Minors or insolvents are not eligible.
-        </Subsection>
-        <Subsection title="2.2 Worker’s Eligibility">
-          You declare that your workers are of minimum legal age and you meet all eligibility criteria.
-        </Subsection>
-        <Subsection title="2.3 Responsibility for your Account">
-          You are responsible for all activities under your account, and must maintain its confidentiality.
-        </Subsection>
-        <Subsection title="2.4 Prohibited Content">
-          List includes nudity, hate speech, fake profiles, spam, etc.
-        </Subsection>
-      </Section>
+              {/* Introduction */}
+              <section id="introduction" className="p-8 border-b border-slate-100">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-green-100 rounded-lg p-2">
+                    <FileText className="h-6 w-6 text-green-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">1. Introduction</h2>
+                </div>
 
-      {/* RIGHTS AND LIMITS */}
-      <Section title="3. Rights and Limits">
-        <BulletList title="3.1 Intellectual Property Rights" items={[
-          "All rights reserved by LOKACI.",
-          "Trademarks, logos, etc. belong to LOKACI."
-        ]} />
-        <Subsection title="3.2 Price Modification Rights">
-          LOKACI may change pricing without notice in accordance with applicable laws.
-        </Subsection>
-        <Subsection title="3.3 Limitations on services / bookings">
-          LOKACI can restrict, suspend, or terminate your account for breaches or misuse.
-        </Subsection>
-        <Subsection title="3.4 Messaging Limits">
-          Sending spam or unsolicited messages to customers is strictly prohibited.
-        </Subsection>
-        <Subsection title="3.5 No Discrimination">
-          Discrimination based on protected classes is illegal and not tolerated.
-        </Subsection>
-        <Subsection title="3.6 Content Posting">
-          Prohibited content includes offensive, misleading, or illegal materials.
-        </Subsection>
-        <Subsection title="3.7 Relationship">
-          You and LOKACI are independent contractors.
-        </Subsection>
-        <Subsection title="3.8 Listing of Services">
-          You must be legally allowed to provide listed services and ensure they are accurate.
-        </Subsection>
-      </Section>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">1.1 Translation of the Terms</h3>
+                    <p className="text-slate-600">
+                      LOKACI may provide translations for convenience, but the English version prevails in case of conflicts.
+                    </p>
+                  </div>
 
-      {/* DISCLAIMER */}
-      <Section title="4. Disclaimer and Limit of Liability">
-        <Subsection title="4.1 No Warranty">
-          Services are provided “AS IS” without warranties.
-        </Subsection>
-        <Subsection title="4.2 Credit/Debit Card Fraud">
-          You bear responsibility for fraudulent transactions.
-        </Subsection>
-        <Subsection title="4.3 Product Side-effects">
-          Service providers are responsible for any side-effects caused.
-        </Subsection>
-        <Subsection title="4.4 Disclosure of Personal Info">
-          LOKACI is not liable for data breaches by third parties.
-        </Subsection>
-      </Section>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">1.2 Definitions</h3>
+                    <div className="bg-slate-50 rounded-lg p-4">
+                      <ul className="space-y-2 text-slate-600">
+                        <li><strong>"YOU"</strong> or <strong>"employee"</strong> refers to any natural or legal person registered on the App.</li>
+                        <li><strong>"We"</strong>, <strong>"Us"</strong>, <strong>"Our"</strong> refer to LOKACI.com.</li>
+                      </ul>
+                    </div>
+                  </div>
 
-      {/* TERMINATION */}
-      <Section title="5. Termination">
-        <Subsection title="5.1 Termination from Services">
-          Either party may terminate at any time.
-        </Subsection>
-        <Subsection title="5.2 Suspension of Account">
-          Accounts may be suspended for unethical conduct.
-        </Subsection>
-        <Subsection title="5.3 Legal Action">
-          Legal actions may be taken for hacking, misuse, or defamatory statements.
-        </Subsection>
-      </Section>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">1.3 Use of Another's Account</h3>
+                    <p className="text-slate-600">
+                      You may not impersonate or access the platform via someone else's account unless authorized.
+                    </p>
+                  </div>
+                </div>
+              </section>
 
-      {/* ADVERTISEMENTS */}
-      <Section title="6. Advertisements">
-        <Subsection title="6.1 Copyright">
-          LOKACI owns all advertising and promotional materials.
-        </Subsection>
-      </Section>
+              {/* Obligations */}
+              <section id="obligations" className="p-8 border-b border-slate-100">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-blue-100 rounded-lg p-2">
+                    <Users className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">2. Obligations</h2>
+                </div>
 
-      {/* FEES & PAYMENTS */}
-      <Section title="7. Fees and Payments">
-        <BulletList title="7.1 Registration Fees" items={["Currently free."]} />
-        <BulletList title="7.2 Charges for Advertisements" items={["No advertisement fees."]} />
-        <Subsection title="7.3 Payments">
-          Detailed cancellation policies and charges listed.
-        </Subsection>
-        <Subsection title="7.4 Taxation">
-          GST-compliant billing as per Indian laws.
-        </Subsection>
-        <Subsection title="7.5 Pricing">
-          Prices are determined by LOKACI. No extra charges are allowed.
-        </Subsection>
-      </Section>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">2.1 Membership Eligibility</h3>
+                    <p className="text-slate-600">
+                      Only legally competent individuals may use the platform. Minors or insolvents are not eligible.
+                    </p>
+                  </div>
 
-      {/* DISPUTES */}
-      <Section title="8. Dispute Resolution">
-        <Subsection title="8.1 Grievance Redressal">
-          Contact: <a href="mailto:grievance.officer@lokaci.com" className="text-blue-600">grievance.officer@lokaci.com</a>
-        </Subsection>
-        <Subsection title="8.2 Jurisdiction">
-          Governed under Indian law. Courts of New Delhi have jurisdiction.
-        </Subsection>
-      </Section>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">2.2 Worker's Eligibility</h3>
+                    <p className="text-slate-600">
+                      You declare that your workers are of minimum legal age and you meet all eligibility criteria.
+                    </p>
+                  </div>
 
-      {/* INDEMNITY */}
-      <Section title="9. Indemnity">
-        You agree to indemnify LOKACI against any legal claims from third parties due to your actions.
-      </Section>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">2.3 Responsibility for Your Account</h3>
+                    <p className="text-slate-600">
+                      You are responsible for all activities under your account, and must maintain its confidentiality.
+                    </p>
+                  </div>
 
-      {/* GENERAL TERMS */}
-      <Section title="10. General Terms">
-        <Subsection title="10.1 Important Points">
-          This contract supersedes all prior agreements.
-        </Subsection>
-        <Subsection title="10.2 Incentive Programs">
-          Governed by individual program terms. Subject to termination on misuse.
-        </Subsection>
-        <Subsection title="10.3 Changes to Terms">
-          You are responsible for reviewing updates. Continued use implies acceptance.
-        </Subsection>
-      </Section>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">2.4 Prohibited Content</h3>
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                      <p className="text-red-700 text-sm mb-2">The following content is strictly prohibited:</p>
+                      <ul className="text-red-600 text-sm space-y-1">
+                        <li>• Nudity or sexually explicit content</li>
+                        <li>• Hate speech or discriminatory content</li>
+                        <li>• Fake profiles or impersonation</li>
+                        <li>• Spam or unsolicited messages</li>
+                        <li>• Illegal or harmful activities</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
-      {/* PRIVACY POLICY */}
-      <Section title="11. Privacy Policy">
-        Data is protected under IT Act, 2000. Shared with affiliates only under legitimate circumstances.
-      </Section>
+              {/* Rights and Limits */}
+              <section id="rights-limits" className="p-8 border-b border-slate-100">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-purple-100 rounded-lg p-2">
+                    <Shield className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">3. Rights and Limits</h2>
+                </div>
 
-      {/* DOs & DON'Ts */}
-      <Section title="12. Lokaci Dos and Don’ts">
-        Covers data security, neutrality in reviews, and platform conduct.
-      </Section>
+                <div className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-800 mb-3">3.1 Intellectual Property Rights</h3>
+                      <ul className="text-slate-600 space-y-2">
+                        <li>• All rights reserved by LOKACI</li>
+                        <li>• Trademarks and logos belong to LOKACI</li>
+                        <li>• Unauthorized use is prohibited</li>
+                      </ul>
+                    </div>
 
-      {/* COMPLAINTS */}
-      <Section title="13. Complaints">
-        We may investigate behavior that causes issues with customers.
-      </Section>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-800 mb-3">3.2 Price Modification Rights</h3>
+                      <p className="text-slate-600">
+                        LOKACI may change pricing without notice in accordance with applicable laws.
+                      </p>
+                    </div>
 
-      {/* CONTACT */}
-      <Section title="14. Contact Us">
-        You may leave a message via the contact feature on the App/Website or email us.
-      </Section>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-800 mb-3">3.3 Service Limitations</h3>
+                      <p className="text-slate-600">
+                        LOKACI can restrict, suspend, or terminate your account for breaches or misuse.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-800 mb-3">3.4 Messaging Limits</h3>
+                      <p className="text-slate-600">
+                        Sending spam or unsolicited messages to customers is strictly prohibited.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                    <h3 className="font-semibold text-amber-800 mb-2">3.5 No Discrimination Policy</h3>
+                    <p className="text-amber-700 text-sm">
+                      Discrimination based on protected classes is illegal and not tolerated on our platform.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">3.7 Relationship</h3>
+                    <p className="text-slate-600">
+                      You and LOKACI are independent contractors. No employment relationship is created.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">3.8 Listing of Services</h3>
+                    <p className="text-slate-600">
+                      You must be legally allowed to provide listed services and ensure they are accurate and up-to-date.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Disclaimer and Liability */}
+              <section id="disclaimer" className="p-8 border-b border-slate-100">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-red-100 rounded-lg p-2">
+                    <AlertTriangle className="h-6 w-6 text-red-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">4. Disclaimer and Limit of Liability</h2>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <h3 className="font-semibold text-red-800 mb-2">4.1 No Warranty</h3>
+                    <p className="text-red-700 text-sm">
+                      Services are provided "AS IS" without warranties of any kind, express or implied.
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-slate-50 rounded-lg p-4">
+                      <h4 className="font-medium text-slate-800 mb-2">4.2 Credit/Debit Card Fraud</h4>
+                      <p className="text-sm text-slate-600">You bear responsibility for fraudulent transactions on your account.</p>
+                    </div>
+                    <div className="bg-slate-50 rounded-lg p-4">
+                      <h4 className="font-medium text-slate-800 mb-2">4.3 Product Side-effects</h4>
+                      <p className="text-sm text-slate-600">Service providers are responsible for any side-effects caused by their services.</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">4.4 Disclosure of Personal Info</h3>
+                    <p className="text-slate-600">
+                      LOKACI is not liable for data breaches by third parties or unauthorized access to your information.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Termination */}
+              <section id="termination" className="p-8 border-b border-slate-100">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-orange-100 rounded-lg p-2">
+                    <Settings className="h-6 w-6 text-orange-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">5. Termination</h2>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">5.1 Termination from Services</h3>
+                    <p className="text-slate-600">
+                      Either party may terminate the agreement at any time with or without cause.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">5.2 Suspension of Account</h3>
+                    <p className="text-slate-600">
+                      Accounts may be suspended immediately for unethical conduct, policy violations, or harmful behavior.
+                    </p>
+                  </div>
+
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 className="font-semibold text-yellow-800 mb-2">5.3 Legal Action</h3>
+                    <p className="text-yellow-700 text-sm">
+                      Legal actions may be taken for hacking, platform misuse, or defamatory statements against LOKACI.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Advertisements */}
+              <section className="p-8 border-b border-slate-100">
+                <h2 className="text-xl font-bold text-slate-800 mb-4">6. Advertisements</h2>
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-800 mb-3">6.1 Copyright</h3>
+                  <p className="text-slate-600">
+                    LOKACI owns all advertising and promotional materials displayed on the platform.
+                  </p>
+                </div>
+              </section>
+
+              {/* Fees and Payments */}
+              <section id="fees-payments" className="p-8 border-b border-slate-100">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-green-100 rounded-lg p-2">
+                    <CreditCard className="h-6 w-6 text-green-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">7. Fees and Payments</h2>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <h3 className="font-semibold text-green-800 mb-2">7.1 Registration Fees</h3>
+                      <p className="text-green-700 text-sm">Currently free of charge.</p>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <h3 className="font-semibold text-green-800 mb-2">7.2 Advertisement Charges</h3>
+                      <p className="text-green-700 text-sm">No advertisement fees at this time.</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">7.3 Payments</h3>
+                    <p className="text-slate-600 mb-3">
+                      Detailed cancellation policies and charges are listed in individual service agreements.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">7.4 Taxation</h3>
+                    <p className="text-slate-600">
+                      GST-compliant billing as per Indian laws. All applicable taxes will be added to service charges.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">7.5 Pricing</h3>
+                    <p className="text-slate-600">
+                      Prices are determined by LOKACI. Service providers may not charge extra fees beyond listed prices.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Dispute Resolution */}
+              <section id="dispute-resolution" className="p-8 border-b border-slate-100">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-indigo-100 rounded-lg p-2">
+                    <Gavel className="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">8. Dispute Resolution</h2>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">8.1 Grievance Redressal</h3>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <p className="text-blue-700 text-sm">
+                        For any grievances or disputes, please contact: <strong>grievance.officer@lokaci.com</strong>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">8.2 Jurisdiction</h3>
+                    <p className="text-slate-600">
+                      These terms are governed under Indian law. Courts of New Delhi have exclusive jurisdiction over any disputes.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Indemnity */}
+              <section className="p-8 border-b border-slate-100">
+                <h2 className="text-xl font-bold text-slate-800 mb-4">9. Indemnity</h2>
+                <p className="text-slate-600">
+                  You agree to indemnify and hold LOKACI harmless against any legal claims, damages, or expenses arising from third parties due to your actions, content, or use of the platform.
+                </p>
+              </section>
+
+              {/* General Terms */}
+              <section className="p-8 border-b border-slate-100">
+                <h2 className="text-xl font-bold text-slate-800 mb-4">10. General Terms</h2>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">10.1 Important Points</h3>
+                    <p className="text-slate-600">This contract supersedes all prior agreements between you and LOKACI.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">10.2 Incentive Programs</h3>
+                    <p className="text-slate-600">
+                      Governed by individual program terms and conditions. Subject to termination upon misuse.
+                    </p>
+                  </div>
+
+                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                    <h3 className="font-semibold text-amber-800 mb-2">10.3 Changes to Terms</h3>
+                    <p className="text-amber-700 text-sm">
+                      You are responsible for reviewing updates to these terms. Continued use of the platform implies acceptance of any changes.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Privacy Policy Reference */}
+              <section className="p-8 border-b border-slate-100">
+                <h2 className="text-xl font-bold text-slate-800 mb-4">11. Privacy Policy</h2>
+                <p className="text-slate-600">
+                  Your data is protected under the Information Technology Act, 2000. Personal information may be shared with affiliates only under legitimate business circumstances as outlined in our Privacy Policy.
+                </p>
+              </section>
+
+              {/* Dos and Don'ts */}
+              <section className="p-8 border-b border-slate-100">
+                <h2 className="text-xl font-bold text-slate-800 mb-4">12. Lokaci Dos and Don'ts</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-semibold text-green-800 mb-3">✓ Do</h3>
+                    <ul className="space-y-2 text-slate-600">
+                      <li>• Maintain data security and confidentiality</li>
+                      <li>• Provide honest and neutral reviews</li>
+                      <li>• Follow platform conduct guidelines</li>
+                      <li>• Report suspicious activities</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-red-800 mb-3">✗ Don't</h3>
+                    <ul className="space-y-2 text-slate-600">
+                      <li>• Share login credentials</li>
+                      <li>• Post fake or misleading content</li>
+                      <li>• Engage in discriminatory behavior</li>
+                      <li>• Violate intellectual property rights</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              {/* Complaints */}
+              <section className="p-8 border-b border-slate-100">
+                <h2 className="text-xl font-bold text-slate-800 mb-4">13. Complaints</h2>
+                <p className="text-slate-600">
+                  We reserve the right to investigate any behavior that causes issues with customers or violates our terms of service. Appropriate action will be taken based on our findings.
+                </p>
+              </section>
+
+              {/* Contact */}
+              <section id="contact" className="p-8">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="bg-blue-100 rounded-lg p-2">
+                    <Phone className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-800">14. Contact Us</h2>
+                </div>
+
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6">
+                  <p className="text-slate-600 mb-4">
+                    For any questions, concerns, or support regarding these Terms of Use, please contact us:
+                  </p>
+                  <ul className="space-y-2 text-slate-600">
+                    <li>• Use the contact feature on the App/Website</li>
+                    <li>• Email us at our support address</li>
+                    <li>• Leave a message through our customer service portal</li>
+                  </ul>
+                </div>
+
+                <div className="mt-6 flex items-center space-x-3 text-sm text-slate-500">
+                  <MessageSquare className="h-4 w-4" />
+                  <span>These terms are subject to change. Please review regularly for updates.</span>
+                </div>
+              </section>
+            </div>
+          </main>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
-const Section = ({ title, children }) => (
-  <div className="mb-8">
-    <h2 className="text-2xl font-semibold text-indigo-600 mb-2">{title}</h2>
-    <div className="pl-4 border-l-4 border-indigo-300">{children}</div>
-  </div>
-);
-
-const Subsection = ({ title, children }) => (
-  <div className="mb-4">
-    <h3 className="text-lg font-semibold text-gray-700 mb-1">{title}</h3>
-    <p className="text-gray-700">{children}</p>
-  </div>
-);
-
-const BulletList = ({ title, items }) => (
-  <div className="mb-4">
-    <h3 className="text-lg font-semibold text-gray-700 mb-1">{title}</h3>
-    <ul className="list-disc pl-6 text-gray-700">
-      {items.map((item, idx) => (
-        <li key={idx}>{item}</li>
-      ))}
-    </ul>
-  </div>
-);
-
-export default TermsOfUse;
+export default App;

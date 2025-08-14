@@ -272,7 +272,7 @@ export default function Pricing() {
           </div>
         </section>
         <FAQ title="Lokaci Pricing" subTitle="FAQs" />
-        <BrandCarousel />
+        {/* <BrandCarousel /> */}
       </section>
     </>
   );

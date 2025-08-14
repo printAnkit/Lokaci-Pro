@@ -149,12 +149,13 @@ export default function Footer() {
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href="#"
+              <Link
+                to="/get-started"
                 className="text-gray-400 hover:text-white transition-colors"
+                onClick={() => window.scrollTo({top:0, behavior: "smooth"})}
               >
                 <MessageSquare className="h-5 w-5" />
-              </a>
+              </Link>
               <a
                 href="https://www.facebook.com/LokaciOfficial/"
                 className="text-gray-400 hover:text-white transition-colors"

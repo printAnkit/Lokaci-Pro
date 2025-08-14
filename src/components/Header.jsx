@@ -105,26 +105,26 @@ export default function Header() {
               {isOpen && (
                 <div className="absolute z-10 mt-2 w-50 rounded-md bg-white shadow-lg ring-1 ring-gray-500 ring-opacity-5">
                   <div className="py-1 flex flex-col m-2">
-                      <Link
-                        to="about"
-                        className="m-2 text-gray-800 hover:text-blue-600"
-                        onClick={() => {
-                          setIsOpen(false);
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        About
-                      </Link>
-                      <Link
-                        to="contact"
-                        className="m-2 text-gray-800 hover:text-blue-600"
-                        onClick={() => {
-                          setIsOpen(false);
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        Contact Us
-                      </Link>
+                    <Link
+                      to="about"
+                      className="m-2 text-gray-800 hover:text-blue-600"
+                      onClick={() => {
+                        setIsOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      About
+                    </Link>
+                    <Link
+                      to="contact"
+                      className="m-2 text-gray-800 hover:text-blue-600"
+                      onClick={() => {
+                        setIsOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Contact Us
+                    </Link>
                   </div>
                 </div>
               )}
@@ -158,26 +158,73 @@ export default function Header() {
         </div>
 
         {isMenuOpen && (
-          <div ref={mobileMenuRef} className="md:hidden py-4 border-t">
+          <div ref={mobileMenuRef} className="md:hidden py-4">
             <nav className="flex flex-col space-y-4">
-              {[
-                { to: "/features", label: "Features" },
-                { to: "/pricing", label: "Pricing" },
-                { to: "/#reviews", label: "Reviews" },
-                { to: "/#faq", label: "FAQ" },
-              ].map((item, i) => (
-                <NavLink
-                  key={i}
-                  to={item.to}
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                  onClick={() => {
-                    handleNavClick();
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  {item.label}
-                </NavLink>
-              ))}
+              <Link
+                to="/features"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => {
+                  handleNavClick();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Features
+              </Link>
+
+              <Link
+                to="/pricing"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => {
+                  handleNavClick();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Pricing
+              </Link>
+
+              <Link
+                to="/#reviews"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => {
+                  handleNavClick();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Reviews
+              </Link>
+
+              <Link
+                to="/#faq"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => {
+                  handleNavClick();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                FAQ
+              </Link>
+
+              <Link
+                to="/about"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => {
+                  handleNavClick();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                About Us
+              </Link>
+
+              <Link
+                to="/contact"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => {
+                  handleNavClick();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Contact
+              </Link>
 
               <Link
                 to="get-started"

@@ -16,7 +16,7 @@ export default function Home() {
       <Reviews/>
       <CallToAction />
       <FAQ title="Everything You need to" subTitle="know." />
-      <BrandCarousel/>
+      {/* <BrandCarousel/> */}
     </div>
   );
 }
